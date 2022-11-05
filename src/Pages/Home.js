@@ -6,6 +6,8 @@ import KeyBoardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { makeStyles } from "@mui/styles";
 // About section
 import AboutSection from "../Components/AboutSection";
+import useMediaQuery from "@mui/material/useMediaQuery"
+import { useTheme } from "@mui/material/styles"
 
 const useStyles = makeStyles({
   inputrField: {
@@ -13,7 +15,7 @@ const useStyles = makeStyles({
     border: "1px solid #C4C4C4",
     borderRadius: "10px",
     width: "100%",
-    fontSize: "16px",
+    
     letterSpacing : "0.1em",
     fontWeight : 400,
     outline : "none"
@@ -22,6 +24,18 @@ const useStyles = makeStyles({
 
 export default function Home(props) {
   const classes = useStyles();
+  const theme =useTheme()
+  
+  //for making responsive text
+  const matches=useMediaQuery(theme.breakpoints.down("1100"))
+
+  //for making responsive input field
+  const input=useMediaQuery(theme.breakpoints.down("900"))
+
+
+
+
+
   return (
     <Grid sx={{ minHeight: "100vh", overflow: "hidden" , paddingTop : "65px" }}>
       <Header />
@@ -40,12 +54,12 @@ export default function Home(props) {
           <Grid style={{ fontWeight: "normal" , fontSize : "16px" }}>
             come ! join us in this journey of
           </Grid>
-          <Grid style={{ fontWeight: "bold", fontSize: 80 , lineHeight : "1.2em" , marginTop : "20px" }}>
+          <Grid style={{ fontWeight: "bold", fontSize:matches?60:80 , lineHeight : "1.2em" , marginTop : "20px" }}>
             Beginning of
             <br />
             Infinity.
           </Grid>
-          <Grid sx={{ position: "relative", maxWidth: "406px" , marginTop : "29px" }}>
+          <Grid sx={{ position: "relative", maxWidth: input?"250px":"406px" , marginTop : "29px",marginRight:input?20:0 }}>
             {/* <TextField
               label="xyz@gmail.com"
               variant="outlined"
@@ -84,16 +98,18 @@ export default function Home(props) {
             <input
               placeholder="xyz@gmail.com"
               className={classes.inputrField}
+              style={{fontSize: input?"12px":"16px",}}
             />
             <button
               style={{
+                display:input?"none":"flex",
                 border: 0,
                 borderRadius: 10,
                 backgroundColor: "#2785FC",
                 color: "#fff",
                 cursor: "pointer",
                 padding: "10px 20px",
-                fontSize: "16.8px",
+                fontSize: input?"9px":"16.8px",
                 position: "absolute",
                 top: 0,
                 right: 0,
@@ -102,6 +118,25 @@ export default function Home(props) {
               }}
             >
               Lets Get Started!
+            </button>
+            <button
+              style={{
+                display:input?"flex":"none",
+                border: 0,
+                borderRadius: 10,
+                backgroundColor: "#2785FC",
+                color: "#fff",
+                cursor: "pointer",
+                padding: "10px 20px",
+                fontSize: input?"12px":"16.8px",
+                position: "absolute",
+                top: 0,
+                right: 0,
+                height: "100%",
+                fontWeight : "bold",
+              }}
+            >
+              Lets Go!
             </button>
           </Grid>
           <Grid style={{ color: "#666666" , marginTop : "18px" , display : "flex" , alignItems : "center" }}>
