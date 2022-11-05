@@ -143,8 +143,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
-gdsc itm
+## 🔗 Contact Us
+[![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](gdsc.tech@itmgoi.in)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/groups/9220794)
+
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/GDSCITM?t=hS78uYXiSkN1sHhrs5jELQ&s=08)
+
+[![instagram](https://img.shields.io/badge/instagram-cd486b?style=for-the-badge&logo=instagram&logoColor=pink)](https://www.instagram.com/gdscitm?r=nametag)
+
+
+
 
 
 
