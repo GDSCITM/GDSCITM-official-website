@@ -130,16 +130,17 @@ export default function Home(props) {
                 padding: "10px 20px",
                 fontSize: input?"12px":"16.8px",
                 position: "absolute",
-                top: 0,
+                top: 50,
                 right: 0,
                 height: "100%",
                 fontWeight : "bold",
+                width: "100%"
               }}
             >
               Lets Go!
             </button>
           </Grid>
-          <Grid style={{ color: "#666666" , marginTop : "18px" , display : "flex" , alignItems : "center" }}>
+          <Grid style={{ color: "#666666" , marginTop : "55px" , marginLeft : "40px" ,display : "flex" , alignItems : "center"}}>
             Know more
             {/* <IconButton> */}
               <KeyBoardArrowDownIcon />
