@@ -65,7 +65,7 @@ export default function Home(props) {
           <Grid
             sx={{
               position: "relative",
-              maxWidth: input ? "250px" : "406px",
+              maxWidth: input ? "550px" : "750px",
               marginTop: "29px",
               marginRight: input ? 20 : 0,
             }}
