@@ -11,7 +11,6 @@ import { useTheme } from "@mui/material/styles";
 
 const useStyles = makeStyles({
   inputrField: {
-    padding: "10px 190px 10px 14px",
     border: "1px solid #C4C4C4",
     borderRadius: "10px",
     width: "100%",
@@ -108,7 +107,12 @@ export default function Home(props) {
             <input
               placeholder="xyz@gmail.com"
               className={classes.inputrField}
-              style={{ fontSize: input ? "12px" : "16px" }}
+              style={{
+                fontSize: input ? "12px" : "16px",
+                padding: input
+                  ? "10px 100px 10px 14px"
+                  : "10px 190px 10px 14px",
+              }}
             />
             <button
               style={{
