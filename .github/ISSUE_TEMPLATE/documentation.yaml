@@ -5,7 +5,7 @@ labels: [Enhancement]
 body:
   - type: textarea
     attributes:
-      description: Thanks for making our documentation better 🙏
+      label: Thanks for making our documentation better 🙏
   - type: textarea
     attributes:
       label: Description
