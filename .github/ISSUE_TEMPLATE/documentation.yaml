@@ -5,10 +5,7 @@ labels: [Enhancement]
 body:
   - type: textarea
     attributes:
-      label: Thanks for making our documentation better 🙏
-  - type: textarea
-    attributes:
-      label: Description
+      label: 💬 Description
       description: A concise description of what you're experiencing.
     validations:
       required: false
