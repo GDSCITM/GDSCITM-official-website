@@ -5,7 +5,7 @@ labels: [Enhancement]
 body:
   - type: textarea
     attributes:
-      label: 💬 Description
+      - label: 💬 Description
       required: true
       description: A concise description of what you're experiencing.
     validations:
