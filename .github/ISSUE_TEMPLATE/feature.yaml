@@ -18,14 +18,12 @@ body:
   - type: checkboxes
     attributes:
       label: 👀 Have you spent some time to check if this issue has been raised before?
-      description: I checked and didn't find similar issue
       options:
         - label: I checked and didn't find similar issue
           required: true
   - type: checkboxes
     attributes:
       label: 🔖 Have you read the Code of Conduct?
-      description: Please search to see if an issue already exists for the feature you wanna add.
       options:
         - label: Please search to see if an issue already exists for the feature you wanna add.
           required: true
