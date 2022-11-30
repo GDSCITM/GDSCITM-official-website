@@ -1,0 +1,188 @@
+/* header logo name */
+.mainHeaderHeading {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mainHeaderSubHeading {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-weight: 500;
+    color: "#666666";
+}
+
+/* menu side bar code */
+.mainMenuSideBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 9999999;
+}
+
+.mainMenuSideBarHolder {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.mainMenuSideBarHolderHeader {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.mainMenuSideBarHolderHeader img {
+    position: relative;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainMenuSideBarClose {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    line-height: 0px;
+    font-size: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.mainMenuSideBarClose:hover {
+    background: #f7f7f7;
+}
+
+.mainMenuSideBarHolderList {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.mainMenuSideBarHolderList p {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mainMenuSideBarHolderList p:hover {
+    background: #f7f7f7;
+}
+
+.mainMenuSideBarHolderContact {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 13px;
+    color: #666666;
+}
+
+.mainMenuSideBarHolderContact p {
+    text-align: center;
+}
+
+.mainMenuSideBarHolderContact p span {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0px 8px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mainHeaderHeading {
+        font-size: 15px;
+    }
+
+    .mainHeaderSubHeading {
+        font-size: 12px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .mainHeaderHeading {
+        font-size: 18px;
+    }
+
+    .mainHeaderSubHeading {
+        font-size: 15px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainHeaderHeading {
+        font-size: 18px;
+    }
+
+    .mainHeaderSubHeading {
+        font-size: 15px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainHeaderHeading {
+        font-size: 20px;
+    }
+
+    .mainHeaderSubHeading {
+        font-size: 15px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainHeaderHeading {
+        font-size: 20px;
+    }
+
+    .mainHeaderSubHeading {
+        font-size: 15px;
+    }
+}
