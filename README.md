@@ -156,8 +156,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/GDSCITM/GDSCITM-official-website?style=plastic?style=plastic
