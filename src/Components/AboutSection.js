@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import React from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import PeopleImage from "./Peoples.svg";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -99,14 +98,19 @@ const AboutSection = () => {
           <Box>
             <img
               className={classes.aboutImage}
-              src={PeopleImage}
+              src={"images/Peoples.svg"}
               alt="People holding hands"
             />
           </Box>
         </Stack>
       </Box>
+
     </Container>
+    
   );
 };
 
+
+
 export default AboutSection;
+

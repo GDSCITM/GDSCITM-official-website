@@ -1,5 +1,4 @@
 import Header from "../Components/Header";
-import Image from "./images/FIRST PAGE.svg";
 import { Grid, TextField, InputAdornment } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import KeyBoardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -8,6 +7,8 @@ import { makeStyles } from "@mui/styles";
 import AboutSection from "../Components/AboutSection";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import { useRef } from "react";
+
 
 const useStyles = makeStyles({
   inputrField: {
@@ -31,6 +32,10 @@ export default function Home(props) {
   //for making responsive input field
   const input = useMediaQuery(theme.breakpoints.down("900"));
 
+  let ref = useRef()
+
+
+
   return (
     <Grid sx={{ minHeight: "100vh", overflow: "hidden", paddingTop: "65px" }}>
       <Header />
@@ -43,7 +48,7 @@ export default function Home(props) {
             alignItems: "center",
           }}
         >
-          <img src={Image} style={{ width: "100%" }} />
+          <img src={"images/FIRST PAGE.svg"} style={{ width: "100%" }} />
         </Grid>
         <Grid style={{ position: "absolute", top: "8vh", left: "17vw" }}>
           <Grid style={{ fontWeight: "normal", fontSize: "16px" }}>
@@ -113,6 +118,7 @@ export default function Home(props) {
                   ? "10px 100px 10px 14px"
                   : "10px 190px 10px 14px",
               }}
+              ref={ref}  
             />
             <button
               style={{
@@ -130,6 +136,7 @@ export default function Home(props) {
                 height: "100%",
                 fontWeight: "bold",
               }}
+              onClick={() => ref.current.value = ""} 
             >
               Lets Get Started!
             </button>
@@ -149,6 +156,7 @@ export default function Home(props) {
                 height: "100%",
                 fontWeight: "bold",
               }}
+              onClick={() => ref.current.value = ""} 
             >
               Lets Go!
             </button>
@@ -169,5 +177,6 @@ export default function Home(props) {
         </Grid>
       </Grid>
     </Grid>
+
   );
 }

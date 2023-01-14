@@ -3,12 +3,12 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
-import Logo from "./GDSC LOGO 1.svg";
 import { Button, Grid } from "@mui/material";
 import { useStyles } from "./HeaderCss";
 import useMediaQuery from "@mui/material/useMediaQuery"
 import { useTheme } from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
+
 
 export default function Header(props) {
   const classes = useStyles();
@@ -22,7 +22,7 @@ export default function Header(props) {
     >
       <CssBaseline />
       <Toolbar>
-        <img src={Logo} height={"65px"} />
+        <img src={"images/GDSC LOGO 1.svg"} height={"65px"} />
         <Typography>
           <div className={classes.heading} style={{fontSize:heading?24:16}}>
             <div>Google Developer Student Club</div>
