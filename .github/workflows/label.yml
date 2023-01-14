@@ -5,18 +5,61 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: Labeler
-on: [pull_request]
+name: Add labels
+
+on:
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
   label:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
-    - uses: actions/labeler@v4
+    - name: Add labels
+      uses: actions/github-script@v2
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const prTitle = github.context.payload.pull_request.title
+          if (prTitle.includes('bug')) {
+            await github.issues.addLabels({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.payload.pull_request.number,
+              labels: ['bug']
+            })
+          }
+          if (prTitle.includes('enhancement')) {
+            await github.issues.addLabels({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.payload.pull_request.number,
+              labels: ['enhancement']
+            })
+          }
+          if (prTitle.includes('question')) {
+            await github.issues.addLabels({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.payload.pull_request.number,
+              labels: ['question']
+            })
+          }
+          if (prTitle.includes('web') || prTitle.includes('website')) {
+            await github.issues.addLabels({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.payload.pull_request.number,
+              labels: ['area/website']
+            })
+          }
+          if (prTitle.includes('doc')) {
+            await github.issues.addLabels({
+              owner: github.context.repo.owner,
+              repo: github.context.repo.repo,
+              issue_number: github.context.payload.pull_request.number,
+              labels: ['area/doc']
+            })
+          }
+             
+
