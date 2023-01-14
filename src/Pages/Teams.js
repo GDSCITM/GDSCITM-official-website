@@ -1,13 +1,11 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import LeftImage from "./images/LeftImage.svg";
-import RightImage from "./images/RightImage.svg";
 import SliderComponent from "../Components/SliderComponent";
 
 export default function Teams() {
   return (
     <Grid>
-    <Grid sx={{ overflow: "hidden" , background : `url(${LeftImage})` , backgroundRepeat : "repeat-x" , backgroundSize : "600px"}}>
+    <Grid sx={{ overflow: "hidden" , background : `url(${"images/LeftImage.svg"})` , backgroundRepeat : "repeat-x" , backgroundSize : "600px"}}>
       <Grid
         style={{
           display: "flex",

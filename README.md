@@ -170,9 +170,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-url]: https://github.com/GDSCITM/GDSCITM-official-website/issues
 [license-shield]: https://img.shields.io/github/license/GDSCITM/GDSCITM-official-website?style=plastic?style=plastic
 [license-url]: https://github.com/GDSCITM/GDSCITM-official-website/blob/master/LICENSE.txt
-[product-screenshot]: src/assets/readmeImages/website.png
+[product-screenshot]: public/assests/readmeImages/screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=plastic&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [mui]: https://img.shields.io/badge/MaterialUi-20232A?style=plastic&logo=MUI&logoColor=007FFF
-[fork-image]: src/assets/readmeImages/Fork.png
-[clone-image]: src/assets/readmeImages/clone.png
+[fork-image]: public/assests/readmeImages/fork.png
+[clone-image]: public/assests/readmeImages/clone.png
