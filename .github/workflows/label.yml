@@ -5,18 +5,44 @@
 # file with configuration.  For more information, see:
 # https://github.com/actions/labeler
 
-name: Labeler
-on: [pull_request]
+name: Add labels
+
+on:
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
   label:
-
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
-    - uses: actions/labeler@v4
+    - name: Add labels
+      uses: actions/label@v2
+      if: ${{ contains(toJson(github.event.pull_request.title), 'bug') }}
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: "bug"
+    - name: Add labels
+      uses: actions/label@v2
+      if: ${{ contains(toJson(github.event.pull_request.title), 'enhancement') }}
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: "enhancement"
+    - name: Add labels
+      uses: actions/label@v2
+      if: ${{ contains(toJson(github.event.pull_request.title), 'question') }}
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: "question"
+    - name: Add labels
+      uses: actions/label@v2
+      if: ${{ contains(toJson(github.event.pull_request.title), 'website') }}
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: "area/website"
+    - name: Add labels
+      uses: actions/label@v2
+      if: ${{ contains(toJson(github.event.pull_request.title), 'doc') }}
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: "area/doc"
+
