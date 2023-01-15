@@ -1,0 +1,27 @@
+# Comment to be posted to on PRs from first time contributors in your repository
+newPRWelcomeComment: |
+  💖 Thanks for opening this pull request! 💖
+  
+  Before your pull request can be merged, you should **update your pull request title** to start with a semantic prefix.
+  
+  Examples of Title with semantic prefixes:
+  
+  - `fix: If PR is about fixing a problem`
+  - `feature: If Pr is about adding feature`
+  - `docs: If PR is about docs`
+  
+  Things that will help get your PR across the finish line:
+  
+  - Include screenshots and animated GIFs whenever possible.
+  
+# Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
+
+# Comment to be posted to on pull requests merged by a first time user
+firstPRMergeComment: >
+  Congrats on merging your first pull request! 🎉🎉🎉
+  
+  ![cat meme](https://www.birthdaywishes.expert/wp-content/uploads/2021/07/That-was-truly-amazing-crying-thumbs-up-cat-Congratulations-meme.jpg?ezimgfmt=rs:402x476/rscb1/ngcb1/notWebP)
+
+# Users authorized to run manual trop backports
+authorizedUsers:
+  - Yashsharma1911
