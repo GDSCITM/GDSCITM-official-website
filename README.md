@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/GDSCITM/GDSCITM-official-website">
-    <img src="src/Components/GDSC LOGO 1.svg" alt="Logo" width="80" height="80">
+    <img src="public/images/GDSC LOGO 1.svg" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">GDSC ITM</h3>
   <p align="center">
@@ -56,7 +56,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]()
+[![Product Name Screen Shot](public/images/assets/readmeImages/website.png)](https://github.com/GDSCITM/GDSCITM-official-website)
 
 Google Developer Student Clubs (GDSC) ITM website is an open source website develop to help the students to get to know what and how gdsc is working. Why we need gdsc website.
 
@@ -86,13 +86,13 @@ A fork is a copy of the original repository. Once you fork a repo, a copy is sto
 
 ### Procedure
 * Fork the repo from the original project’s repository. The <button>Fork</button> button is located in the right upper corner.
-![fork-image]
+![fork-image](public/images/assets/readmeImages/Fork.png)
 
 * Go to your own account; there will be a copy of the project in your repositories.
 
 * Next, you can clone the repository locally by using `git clone URL` . In place of `URL`, put the forked repository’s URL. Click <button>Code</button> and copy the `https URL`.
 
-![clone-image]
+![clone-image](public/images/assets/readmeImages/clone.png)
 
 ## Prerequisites
 
