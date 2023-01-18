@@ -1,0 +1,77 @@
+.event-ele{
+    height: 100vh;
+    border: 1px solid red;
+}
+.event-tag{
+    height: 15.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E3EDFF;
+    
+  
+
+}
+.event-tag h2{
+    font-size: 3.125em;
+    font-weight: 500;
+}
+.img1{
+    flex: 1;
+   
+}
+.img11{
+    flex: 1;
+    background-image: url("./image\ 50.png");
+    height: 13.6em;
+    width: 18.75em;
+    background-size: cover;
+    margin-left: 5%;
+}
+.img2{
+    flex: 1;
+    float: right;
+    text-align: right;
+}
+.img22{
+    flex: 1;
+    background-image: url("./image\ 49.png");
+    height: 13.6em;
+    width: 18.75em;
+    background-size: cover;
+    text-align: right;
+    float: right;
+    margin-right: 5%;
+}
+.list{
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative; 
+    top:-30px;
+    background-color: white;
+    height: 10vh;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 30px;
+}
+
+.all{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+.up{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+.past{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
