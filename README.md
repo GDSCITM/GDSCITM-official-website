@@ -176,3 +176,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [mui]: https://img.shields.io/badge/MaterialUi-20232A?style=plastic&logo=MUI&logoColor=007FFF
 [fork-image]: public/assests/readmeImages/fork.png
 [clone-image]: public/assests/readmeImages/clone.png
+
+<!-- CONTRIBUTORS -->
+## 🔗 Contributors✨
+
+<a href="https://github.com/GDSCITM/GDSCITM-official-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GDSCITM/GDSCITM-official-website" />
+</a>
+
