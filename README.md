@@ -104,7 +104,7 @@ Download node and npm latest version on your local machine.
 
 ## Installation
 
-_Steps to step up project on your local machine ._
+_Steps to set up project on your local machine ._
 
 1. Clone the repo
    ```sh
