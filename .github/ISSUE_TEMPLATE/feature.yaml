@@ -25,5 +25,5 @@ body:
     attributes:
       label: 🔖 Have you read the Code of Conduct?
       options:
-        - label: Please search to see if an issue already exists for the feature you wanna add.
+        - label: Yes, I have read Code of Conduct.
           required: true
