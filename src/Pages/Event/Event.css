@@ -1,6 +1,9 @@
+
 .event-ele{
-    height: 100vh;
-    border: 1px solid red;
+    height: auto;
+    margin-bottom: 10vh;
+    
+   
 }
 .event-tag{
     height: 15.75em;
@@ -73,5 +76,91 @@
     display: flex;
     align-items: center;
     flex: 1;
+    justify-content: center;
+}
+.upcomming{
+    height: 700px;
+    /* border: 4px solid green; */
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+}
+
+/* ##############################  upcoming */
+.card1{
+    
+   margin-top: 0px;
+    height: 330px;
+    flex: 1;
+    
+    /* border: 1px solid red; */
+}
+.card-ele{
+    border-radius: 10px;
+    width: 272px;
+    height: 330px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.upcoming-img{
+    /* background-image: url("./Copy\ of\ Copy\ of\ dsc-ecosystem-banners-linkedin-blue.png"); */
+   background-size: cover;
+    height: 119px;
+    width: 272px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.topimg{
+    height: 119px;
+    width: 272px;
+}
+.border{
+    border: 1px solid white;
+    height: 65px;
+    margin-left: 5%;
+
+}
+.date h3{
+    
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+}
+.date p{
+    font-size: 15px;
+    color: white;
+   
+    margin-top: 0px;
+    top: -10px;
+    position: relative;
+}
+.topic{
+    color: white;
+    margin-left: 7%;
+    font-size: 23px;
+}
+.text-data{
+    /* border: 1px solid red; */
+    display: flex;
+    overflow: hidden;
+    height: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 12px;
+    
+
+}
+.know-ele{
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    
+    /* background-color: blue; */
+    height: 34px;
+    color: white;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
