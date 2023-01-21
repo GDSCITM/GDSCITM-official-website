@@ -1,7 +1,7 @@
 
 .event-ele{
     height: auto;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
     
    
 }
@@ -47,13 +47,13 @@
     margin-right: 5%;
 }
 .list{
-    border: 1px solid gray;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     position:relative; 
     top:-30px;
-    background-color: white;
+    background-color: #fbfbfb;
     height: 10vh;
     margin-left: 30%;
     margin-right: 30%;
@@ -66,8 +66,22 @@
     flex: 1;
     justify-content: center;
 }
+.all1{
+    display: flex;
+    color: rgb(44, 44, 196);
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
 .up{
     display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+.up1{
+    display: flex;
+    color: rgb(44, 44, 196);
     align-items: center;
     flex: 1;
     justify-content: center;
@@ -78,6 +92,9 @@
     flex: 1;
     justify-content: center;
 }
+.past:hover{
+    color: rgb(44, 44, 196);
+}
 .upcomming{
     height: 700px;
     /* border: 4px solid green; */
@@ -85,6 +102,7 @@
     margin-left: 10%;
     margin-right: 10%;
     flex-wrap: wrap;
+    gap: 80px;
 }
 
 /* ##############################  upcoming */
@@ -97,7 +115,7 @@
     /* border: 1px solid red; */
 }
 .card-ele{
-    border-radius: 10px;
+    border-radius: 20px;
     width: 272px;
     height: 330px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -163,4 +181,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.know-ele p{
+    margin-left: 5%;
 }

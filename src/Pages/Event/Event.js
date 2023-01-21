@@ -50,8 +50,8 @@ function Event() {
         </div>
 
         <div className='list'>
-            <div className='all' onClick={handle}>All</div>
-            <div className='up' onClick={handle}>Upcoming</div>
+            <div className={all?"all":"all1"} onClick={handle}>All</div>
+            <div className={all?"up1":"up"} onClick={handle}>Upcoming</div>
             <div className='past'>Past</div>
         </div>
         {all?
