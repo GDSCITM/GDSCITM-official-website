@@ -186,3 +186,10 @@
 .know-ele p{
     margin-left: 5%;
 }
+
+@media screen and (max-width:1280px) {
+    .upcomming{
+       height: auto;
+       flex-direction: row;
+    }
+}
