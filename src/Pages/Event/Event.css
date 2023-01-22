@@ -96,11 +96,11 @@
     color: rgb(44, 44, 196);
 }
 .upcomming{
-    height: 700px;
-    /* border: 4px solid green; */
+    height: 800px;
+    
     display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 11%;
+    margin-right: 9%;
     flex-wrap: wrap;
     gap: 80px;
 }
@@ -111,24 +111,25 @@
    margin-top: 0px;
     height: 330px;
     flex: 1;
+    width: 300px;
     
-    /* border: 1px solid red; */
 }
 .card-ele{
     border-radius: 20px;
     width: 272px;
+    
     height: 330px;
+    margin-left: 15px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .upcoming-img{
-    /* background-image: url("./Copy\ of\ Copy\ of\ dsc-ecosystem-banners-linkedin-blue.png"); */
    background-size: cover;
     height: 119px;
     width: 272px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid red; */
+    
 }
 .topimg{
     height: 119px;
