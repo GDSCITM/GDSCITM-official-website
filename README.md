@@ -19,7 +19,7 @@
   </a>
   <h3 align="center">GDSC ITM</h3>
   <p align="center">
-    <a href="https://github.com/GDSCITM/GDSCITM-official-website"><strong>Explore the Website »</strong></a>
+    <a href="https://gdscitm.netlify.app"><strong>Explore the Website »</strong></a>
     <br />
     <br />
   </p>
