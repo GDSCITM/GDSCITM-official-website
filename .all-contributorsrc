@@ -14,6 +14,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Yashsharma1911",
+      "name": "Yash sharma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71271069?v=4",
+      "profile": "https://yashsharma.netlify.app/",
+      "contributions": [
+        "code",
+        "design",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
