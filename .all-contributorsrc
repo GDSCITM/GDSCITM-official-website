@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "iamsid0908",
+      "name": "SIDDHARTH CHANDRAKAR",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86674873?v=4",
+      "profile": "https://github.com/iamsid0908",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "GDSCITM-official-website",
+  "projectOwner": "GDSCITM"
+}
