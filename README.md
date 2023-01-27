@@ -188,25 +188,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 </a>
 
 
-## Contributors ✨
+<!-- ## Contributors ✨ -->
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+<!-- Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)): -->
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/iamsid0908"><img src="https://avatars.githubusercontent.com/u/86674873?v=4?s=100" width="100px;" alt="SIDDHARTH CHANDRAKAR"/><br /><sub><b>SIDDHARTH CHANDRAKAR</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=iamsid0908" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://yashsharma.netlify.app/"><img src="https://avatars.githubusercontent.com/u/71271069?v=4?s=100" width="100px;" alt="Yash sharma"/><br /><sub><b>Yash sharma</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=Yashsharma1911" title="Code">💻</a> <a href="#design-Yashsharma1911" title="Design">🎨</a> <a href="https://github.com/GDSCITM/GDSCITM-official-website/issues?q=author%3AYashsharma1911" title="Bug reports">🐛</a></td>
-    </tr>
-  </tbody>
-</table>
+
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<!-- This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome! -->
