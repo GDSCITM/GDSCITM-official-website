@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -199,6 +199,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/iamsid0908"><img src="https://avatars.githubusercontent.com/u/86674873?v=4?s=100" width="100px;" alt="SIDDHARTH CHANDRAKAR"/><br /><sub><b>SIDDHARTH CHANDRAKAR</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=iamsid0908" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/NJ-2020"><img src="https://avatars.githubusercontent.com/u/76243292?v=4?s=100" width="100px;" alt="Novell"/><br /><sub><b>Novell</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=NJ-2020" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
