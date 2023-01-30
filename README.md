@@ -24,7 +24,7 @@
   <p align="center">
     <a href="https://gdscitm.netlify.app"><strong>Explore the Website »</strong></a>
     <br />
-    <br />
+    <br /> 
   </p>
 </div>
 
