@@ -163,7 +163,7 @@ export default function Home(props) {
           </Grid>
           <Grid
             style={{
-              color: "#666666",
+              color: "#666668",
               marginTop: "18px",
               display: "flex",
               alignItems: "center",
