@@ -47,7 +47,7 @@ export default function SliderComponent(){
            
             <Grid sx={{maxWidth:202,maxHeight:247.39,margin:10,boxShadow:3,borderRadius:4}}>
               <Grid sx={{height:140,display:'flex',justifyContent:'center', background : `url(${item.bg})`,borderTopLeftRadius:20,borderTopRightRadius:20}}>
-<img src={item.image}/>
+<img style={{padding: '0.5rem'}} src={item.image}/>
               </Grid>
              <Grid sx={{height:107.39}}>
              <Typography gutterBottom   style={{display:'flex',justifyContent:'center',fontSize:15.68,fontWeight:'bold'}}component="div">
