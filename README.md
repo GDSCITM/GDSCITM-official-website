@@ -187,6 +187,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
   <img src="https://contrib.rocks/image?repo=GDSCITM/GDSCITM-official-website" />
 </a>
 
+## 🔗 Maintainers✨
+
+<a href="https://github.com/ArunPatel02"><img src="https://i.ibb.co/m8jStYv/arun-Patel.jpg" alt="arun-Patel" title="Arun Patel" height="80" width="80" style="border-radius: 50%;"></a>
+
 
 <!-- ## Contributors ✨ -->
 
