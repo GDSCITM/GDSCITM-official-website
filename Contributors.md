@@ -9,3 +9,4 @@
 - [Dhamkirti Sisodia](https://github.com/dhamkirti21)
 - [Rodrigo Luchina](https://github.com/rodrigoluchina)
 - [Rishav Raj](https://github.com/Rishav1707)
+- [Soumya Kushwaha](https://github.com/Soumya-Kushwaha)
