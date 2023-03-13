@@ -27,12 +27,28 @@ export default function SliderComponent() {
   ];
 
   var settings = {
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-
+    appendDots: dots => (
+      <div
+        style={{
+          backgroundColor: "#dddddd00",
+          borderRadius: "10px",
+          padding: "0px",
+          position: 'absolute',
+          top: "-7%",
+          left: "50%",
+          transform: "translatex(-50%)",
+          Zindex: -1
+        }}
+      >
+        <ul style={{ margin: "0px", padding: 0 }}> {dots} </ul>
+      </div>
+    ),
   };
   const handleNext = () => {
     rs.current.slickNext();
@@ -100,7 +116,7 @@ export default function SliderComponent() {
         </Grid>
 
       </Grid>
-      <div style={{ marginTop: "60px" }}>
+      <div style={{ marginTop: "60px", position: "relative" }}>
         <Slider {...settings} ref={rs} >
           <Grid container sx={{ display: "flex !important"}}>
             {showComponent()}
