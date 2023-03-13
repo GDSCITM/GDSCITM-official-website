@@ -199,7 +199,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/iamsid0908"><img src="https://avatars.githubusercontent.com/u/86674873?v=4?s=100" width="100px;" alt="SIDDHARTH CHANDRAKAR"/><br /><sub><b>SIDDHARTH CHANDRAKAR</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=iamsid0908" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@rodrigoluchina"><img src="https://avatars.githubusercontent.com/u/33298946?v=4?s=100" width="100px;" alt="Rodrigo Luchina"/><br /><sub><b>Rodrigo Luchina</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=rodrigoluchina" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@rodrigoluchina"><img src="https://avatars.githubusercontent.com/u/33298946?v=4?s=100" width="100px;" alt="Rodrigo Luchina"/><br /><sub><b>Rodrigo Luchina</b></sub></a><br /><a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=rodrigoluchina" title="Code">💻</a> <a href="#infra-rodrigoluchina" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/GDSCITM/GDSCITM-official-website/commits?author=rodrigoluchina" title="Tests">⚠️</a></td>
     </tr>
   </tbody>
 </table>
