@@ -12,8 +12,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { IconButton, Grid, Divider, Box } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-export default function SliderComponent() {
 
+export default function SliderComponent() {
   var rs = useRef();
   var reviews = [
     { id: 1, name: 'Akshat Jain', role: 'Technical Support', image: '/images/1.png', bg: '/images/bg1.png' },
@@ -32,8 +32,8 @@ export default function SliderComponent() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-
   };
+
   const handleNext = () => {
     rs.current.slickNext();
 
@@ -41,36 +41,31 @@ export default function SliderComponent() {
   const handlePrev = () => {
     rs.current.slickPrev();
   };
-  const showComponent = () => {
-    return reviews.map((item, index) => {
-      return (
 
-        <Grid item lg={3} md={3} sm={6} xs={6} sx={{ display: "flex", justifyContent: "center" , padding : "30px 0px 30px 0px" }}>
-          <Box sx={{ minWidth: 203, width: "fit-content", minHeight: 267.39, borderRadius: 4, filter: "drop-shadow(-4.40684px 4.40684px 16.5257px rgba(0, 0, 0, 0.1)) drop-shadow(2.20342px -2.20342px 16.5257px rgba(0, 0, 0, 0.1))" , background : "white" }}>
-            <Box style={{ height: 140, display: 'flex', justifyContent: 'center', background: `url(${item.bg}) no-repeat `, backgroundSize: "cover", backgroundPosition: "center", borderTopLeftRadius: 16, borderTopRightRadius: 16 }}>
-              <img style={{ padding: '1rem' }} src={item.image} />
-            </Box>
-            <Box style={{ height: 107.39, paddingBottom: "20px" }}>
-              <Typography gutterBottom style={{ display: 'flex', justifyContent: 'center', fontSize: "15.68px", fontWeight: 'bold', marginTop: "9px" }} component="div">
-                {item.name}
-              </Typography>
-              <Typography gutterBottom style={{ display: 'flex', justifyContent: 'center', fontSize: "12.54px", color: "#333333", marginTop: "9px" }} component="div">
-                {item.role}
-              </Typography>
-              <Typography variant="body2" style={{ display: 'flex', justifyContent: 'center', gap: "10px", marginTop: "9px", marginBottom: "10px" }} color="#959595"  >
-                <LinkedInIcon fontSize="large" />
-                <TwitterIcon fontSize="large" />
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
+  const showComponent = () => reviews.map((item, index) => (
+    <Grid item lg={3} md={3} sm={6} xs={6} sx={{ display: "flex", justifyContent: "center" , padding : "30px 0px 30px 0px" }}>
+      <Box sx={{ minWidth: 203, width: "fit-content", minHeight: 267.39, borderRadius: 4, filter: "drop-shadow(-4.40684px 4.40684px 16.5257px rgba(0, 0, 0, 0.1)) drop-shadow(2.20342px -2.20342px 16.5257px rgba(0, 0, 0, 0.1))" , background : "white" }}>
+        <Box style={{ height: 140, display: 'flex', justifyContent: 'center', background: `url(${item.bg}) no-repeat `, backgroundSize: "cover", backgroundPosition: "center", borderTopLeftRadius: 16, borderTopRightRadius: 16 }}>
+          <img style={{ padding: '1rem' }} src={item.image} />
+        </Box>
+        <Box style={{ height: 107.39, paddingBottom: "20px" }}>
+          <Typography gutterBottom style={{ display: 'flex', justifyContent: 'center', fontSize: "15.68px", fontWeight: 'bold', marginTop: "9px" }} component="div">
+            {item.name}
+          </Typography>
+          <Typography gutterBottom style={{ display: 'flex', justifyContent: 'center', fontSize: "12.54px", color: "#333333", marginTop: "9px" }} component="div">
+            {item.role}
+          </Typography>
+          <Typography variant="body2" style={{ display: 'flex', justifyContent: 'center', gap: "10px", marginTop: "9px", marginBottom: "10px" }} color="#959595"  >
+            <LinkedInIcon fontSize="large" />
+            <TwitterIcon fontSize="large" />
+          </Typography>
+        </Box>
+      </Box>
+    </Grid>
+  ));
 
-      )
-    })
-  }
   return (
-    <div  >
-
+    <div>
       <Grid container spacing={1} style={{ width: "100%", display: 'flex', marginTop: 5, justifyContent: 'center', flexDirection: 'row', position: 'relative' }}>
         <Grid style={{ position: 'absolute', top: 0, left: 100 }}>
           <IconButton
@@ -98,7 +93,6 @@ export default function SliderComponent() {
             <img src="/images/rightarrow.png" />
           </IconButton>
         </Grid>
-
       </Grid>
       <div style={{ marginTop: "60px" }}>
         <Slider {...settings} ref={rs} >

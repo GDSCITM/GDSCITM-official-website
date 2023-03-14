@@ -1,19 +1,10 @@
 
-.event-ele{
-    height: auto;
-    margin-bottom: 20vh;
-    
-   
-}
-.event-tag{
+.event-tag {
     height: 15.75em;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #E3EDFF;
-    
-  
-
 }
 .event-tag h2{
     font-size: 3.125em;
@@ -21,7 +12,6 @@
 }
 .img1{
     flex: 1;
-   
 }
 .img11{
     flex: 1;
@@ -60,41 +50,21 @@
     border-radius: 30px;
 }
 
-.all{
+.tabber {
     display: flex;
     align-items: center;
     flex: 1;
     justify-content: center;
 }
-.all1{
-    display: flex;
-    color: rgb(44, 44, 196);
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.up{
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.up1{
-    display: flex;
-    color: rgb(44, 44, 196);
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.past{
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.past:hover{
+
+.tabber.active {
     color: rgb(44, 44, 196);
 }
+
+.cardGrid {
+    padding: 10px 134px;
+}
+
 .upcomming{
     height: 800px;
     
@@ -191,5 +161,21 @@
     .upcomming{
        height: auto;
        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .cardGrid {
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img11, .img22{
+       display: none;
+    }
+
+    .cardGrid {
+        padding: 10px 90px;
     }
 }

@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.aboutGrid {
+  padding: 32px 0px 0px 35px;
+}
+
+.mainContentText {
+  margin-top: 51px;
+  margin-left: 247px;
+}
+
+@media screen and (min-width: 900px) {
+    .aboutGrid {
+        padding: 32px 0px 0px 115px;
+    }
+
+    .mainContentText {
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 898px) {
+    .secondContentImage {
+      min-height: 720px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mainContentText {
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .mainContentText {
+      margin-top: 51px;
+      margin-left: 247px;
+    }
+}
