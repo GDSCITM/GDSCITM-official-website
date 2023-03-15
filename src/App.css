@@ -46,6 +46,20 @@
   margin-left: 247px;
 }
 
+.backgroundImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  z-index: 2;
+}
+
+.secondContentImage {
+  width: 565px;
+  height: 565px;
+  margin-top: 45px;
+  margin-left: 25px;
+}
+
 @media screen and (min-width: 900px) {
     .aboutGrid {
         padding: 32px 0px 0px 115px;
@@ -59,14 +73,30 @@
 
 @media screen and (max-width: 898px) {
     .secondContentImage {
-      min-height: 720px;
+      width: 450px;
+      height: 450px;
+      margin-top: 150px;
+      margin-left: 45px;
     }
-}
 
-@media screen and (max-width: 550px) {
     .mainContentText {
       margin-top: 50px;
       margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .backgroundImage {
+      height: 1120px;
+    }
+
+    .mainContentText {
+      margin-top: 200px;
+      margin-left: 100px;
+    }
+
+    .mainGrid {
+      margin-top: 0px !important;
     }
 }
 
