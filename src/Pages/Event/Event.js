@@ -4,8 +4,8 @@ import "./Event.css"
 import Upcoming from './Upcoming'
 
 function Event() {
-    const[all,setAll]=useState(false);
-    const[data,setData]=useState([
+    const[chosen,setChosen]=useState("all"); /*a variable to keep track of the chosen section, like: 'all' or 'upcoming' or 'past' */
+    const[pastData,setPastData]=useState([
         {id:"1",date:"01",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
         ,topImage:"/images/bg1.png",color:"#ffd34e"},
         {id:"2",date:"02",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
@@ -20,7 +20,7 @@ function Event() {
         ,topImage:"/images/bg1.png",color:"#ffd34e"}
     ])
 
-    const[alldata,setAllData]=useState([
+    const[upcomingdata,setUpcomingData]=useState([
         {id:"1",date:"11",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
         ,topImage:"/images/bg1.png",color:"#ffd34e"},
         {id:"2",date:"12",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
@@ -34,10 +34,17 @@ function Event() {
         {id:"6",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
         ,topImage:"/images/bg1.png",color:"#ffd34e"}
     ])
+    const allEvents = upcomingdata.concat(pastData) 
+    /* allEvents is an array which consists of both upcoming and past events */
+    const [allData, setAllData] = useState(allEvents)
 
     useEffect(() => {
-        setAll(all)
-    }, [all])
+        setAllData(allData)
+    }, [allData])
+
+    useEffect(() => {
+        setChosen(chosen)
+    }, [chosen])
 
   return (
     <div className='event-ele'>
@@ -52,14 +59,24 @@ function Event() {
         </div>
 
         <div className='list'>
-            <div className={all?"active":"all"} onClick={(event) => setAll(true)}>All</div>
-            <div className={all?"up":"active"} onClick={(event) => setAll(false)}>Upcoming</div>
-            <div className='past'>Past</div>
+            <div className={chosen == "all"?"active":"all"} onClick={() => setChosen("all")}>All</div>
+            <div className={chosen == "up"?"active":"up"} onClick={() => setChosen("up")}>Upcoming</div>
+            <div className={chosen == "past"?"active":"past"} onClick={() => setChosen("past")}>Past</div>
         </div>
-        {all?
+        {chosen == "all"?
        <div className='upcomming'>
         {
-        data.map(anime=>(
+        pastData.map(anime=>(
+        <>
+        <Upcoming key={anime.id} anime={anime}/>
+        </>
+        ))
+        }
+        </div> :
+        chosen == "up" ?
+        <div className='upcomming'>
+        {
+        upcomingdata.map(anime=>(
         <>
         <Upcoming key={anime.id} anime={anime}/>
         </>
@@ -68,14 +85,13 @@ function Event() {
         </div>:
         <div className='upcomming'>
         {
-        alldata.map(anime=>(
+        pastData.map(anime=>(
         <>
         <Upcoming key={anime.id} anime={anime}/>
         </>
         ))
         }
         </div>
-
         }
     </div>
   )
