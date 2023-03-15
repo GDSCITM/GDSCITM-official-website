@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import "./Event.css"
 import Upcoming from './Upcoming'
@@ -34,9 +34,11 @@ function Event() {
         {id:"6",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
         ,topImage:"/images/bg1.png",color:"#ffd34e"}
     ])
-    const handle=(e)=>{
-        setAll(!all);
-    }
+
+    useEffect(() => {
+        setAll(all)
+    }, [all])
+
   return (
     <div className='event-ele'>
         <div className='event-tag'>
@@ -50,8 +52,8 @@ function Event() {
         </div>
 
         <div className='list'>
-            <div className={all?"all":"all1"} onClick={handle}>All</div>
-            <div className={all?"up1":"up"} onClick={handle}>Upcoming</div>
+            <div className={all?"active":"all"} onClick={(event) => setAll(true)}>All</div>
+            <div className={all?"up":"active"} onClick={(event) => setAll(false)}>Upcoming</div>
             <div className='past'>Past</div>
         </div>
         {all?
