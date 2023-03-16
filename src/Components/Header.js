@@ -12,15 +12,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header(props) {
   const classes = useStyles();
-  var theme=useTheme()
-  const matches=useMediaQuery(theme.breakpoints.up('900'))
-  const heading=useMediaQuery(theme.breakpoints.up('361'))
+  var theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('900'));
+  const heading = useMediaQuery(theme.breakpoints.up('361'));
+
   return (
     <AppBar
       position="fixed"
       style={{ background: "#fff", width: "100vw", top: 0, boxShadow: "none" }}
     >
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <Toolbar>
         <img src={"images/GDSC LOGO 1.svg"} height={"65px"} />
         <Typography>

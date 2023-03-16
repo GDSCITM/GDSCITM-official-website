@@ -5,38 +5,37 @@ import SliderComponent from "../Components/SliderComponent";
 export default function Teams() {
   return (
     <Grid>
-    <Grid sx={{ overflow: "hidden" , background : `url(${"images/LeftImage.svg"})` , backgroundRepeat : "repeat-x" , backgroundSize : "600px"}}>
-      <Grid
-        style={{
-          display: "flex",
-          position: "relative",
-          zIndex: 0,
-          flexDirection: "row",
-          justifyContent : "center",
-          background : "rgb(244 240 240 / 45%)"
-        }}
-      >
-        {/* <img src={LeftImage} style={{ width:1440,height:92 }} /> */}
-
+      <Grid rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 1 }} sx={{ overflow: "hidden", background : `url(${"images/LeftImage.svg"})`, backgroundRepeat : "repeat-x", backgroundSize : "600px", marginTop: '86px' }}>
         <Grid
           style={{
-            width: 342,
-            height: 92,
-            backgroundColor: "#FFCE50",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontWeight:'bold',
-            color:'#fff',
-            fontSize:50
+            position: "relative",
+            zIndex: 0,
+            flexDirection: "row",
+            justifyContent : "center",
+            background : "rgb(244 240 240 / 45%)"
           }}
         >
-          Teams
+          {/* <img src={LeftImage} style={{ width:1440,height:92 }} /> */}
+
+          <Grid
+            style={{
+              width: 342,
+              height: 92,
+              backgroundColor: "#FFCE50",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontWeight:'bold',
+              color:'#fff',
+              fontSize:50
+            }}
+          >
+            Teams
+          </Grid>
         </Grid>
       </Grid>
-      <Grid></Grid>
-    </Grid>
-   <SliderComponent/>
+      <SliderComponent/>
     </Grid>
   );
 }

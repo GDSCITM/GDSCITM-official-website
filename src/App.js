@@ -12,7 +12,6 @@ function App() {
       <AboutSection />
       <Event/>
       <Teams/>
-      
     </>
   );
 }
