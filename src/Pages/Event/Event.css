@@ -58,41 +58,22 @@
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 30px;
+    cursor: pointer;
 }
-
-.all{
+.all, .up, .past{
     display: flex;
     align-items: center;
     flex: 1;
     justify-content: center;
 }
-.all1{
-    display: flex;
-    color: rgb(44, 44, 196);
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.up{
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.up1{
+.active {
     display: flex;
     color: rgb(44, 44, 196);
     align-items: center;
     flex: 1;
     justify-content: center;
 }
-.past{
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-}
-.past:hover{
+.past:hover, .all:hover, .up:hover{
     color: rgb(44, 44, 196);
 }
 .upcomming{
