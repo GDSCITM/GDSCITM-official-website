@@ -174,3 +174,19 @@
        flex-direction: row;
     }
 }
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .cardGrid {
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img11, .img22{
+       display: none;
+    }
+
+    .cardGrid {
+        padding: 10px 90px;
+    }
+}
