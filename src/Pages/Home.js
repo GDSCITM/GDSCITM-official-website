@@ -3,12 +3,14 @@ import { Grid, TextField, InputAdornment } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import KeyBoardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { makeStyles } from "@mui/styles";
+
 // About section
 import AboutSection from "../Components/AboutSection";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { useRef } from "react";
 import '../App.css';
+import './Home.css'
 
 const useStyles = makeStyles({
   inputrField: {
@@ -21,13 +23,16 @@ const useStyles = makeStyles({
   }
 });
 
+
 export default function Home(props) {
   const classes = useStyles();
   const theme = useTheme();
+  
 
   //for making responsive text
   const matches = useMediaQuery(theme.breakpoints.down("1100"));
 
+  
   //for making responsive input field
   const input = useMediaQuery(theme.breakpoints.down("900"));
 
@@ -40,19 +45,23 @@ export default function Home(props) {
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 2 }} className="backgroundImage" sx={{ backgroundImage: { xs: "url('/images/header/background_ext.svg')", sm: "url('/images/header/background.svg')", md: "url('/images/header/background.svg')"} }}>
           <Grid item xs={12} sm={6} md={6}>
               <div className="mainContentText">
-                <Grid style={{ fontWeight: "normal", fontSize: "16px" }}>
+                <Grid className="welcomeMessage" style={{ fontWeight: "normal", fontSize: "16px" }}>
                   come ! join us in this journey of
                 </Grid>
                 <Grid
+                className="welcomeMessage "
                   style={{
                     fontWeight: "bold",
-                    fontSize: matches ? 60 : 80,
+                    fontSize: matches ? 45 : 80,
                     lineHeight: "1.2em",
                     marginTop: "20px",
+                   
                   }}
-                >
-                  Beginning of Infinity.
+                >                 
+                    Beginning of Infinity.
+                  
                 </Grid>
+                
                 <Grid
                   sx={{
                     position: "relative",
@@ -95,6 +104,7 @@ export default function Home(props) {
                       ),
                     }}
                   /> */}
+
                   <input
                     placeholder="xyz@gmail.com"
                     className={classes.inputrField}
@@ -107,6 +117,7 @@ export default function Home(props) {
                     ref={ref}  
                   />
                   <div
+                 
                       style={{
                         position: "absolute",
                         top: 0,
@@ -119,6 +130,7 @@ export default function Home(props) {
                         height: '100%'
                       }}>
                     <button
+                     className="letsGoBtn"
                       style={{
                         display: "flex",
                         border: 0,
@@ -136,6 +148,7 @@ export default function Home(props) {
                       {input ? 'Lets Go!' : 'Lets Get Started!'}
                     </button>
                     <button
+                    
                       style={{
                         display: input ? "none" : "none",
                         border: 0,
@@ -157,6 +170,8 @@ export default function Home(props) {
                     </button>
                   </div>
                 </Grid>
+
+                
                 <Grid
                   style={{
                     color: "#666668",
@@ -165,6 +180,7 @@ export default function Home(props) {
                     fontSize: '14px',
                     alignItems: "center"
                   }}
+                 
                 >
                   Know more
                   {/* <IconButton> */}

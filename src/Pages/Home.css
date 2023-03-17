@@ -1,0 +1,33 @@
+@media screen and (max-width: 600px){
+   
+    /* === for welcome message === */
+   .welcomeMessage{
+    position: relative;
+    left: -80px !important;
+    top: -50px !important;
+    width: 300px;
+   
+   }
+  
+    /* === input field == */
+    .css-b99x2n-MuiGrid-root{
+
+        margin-left: 3px !important;
+        width: 300px !important;
+    }
+    /* === know more text == */
+    .css-vj1n65-MuiGrid-root{
+        margin-top: 80px !important;
+        margin-left: 80px !important;
+    }
+    .letsGoBtn{
+        font-size: 15.5px !important;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: absolute;
+        top: 55px !important;
+        height: 100% !important;
+        justify-content: center;
+        width: 265px !important;
+       
+    }
+}
