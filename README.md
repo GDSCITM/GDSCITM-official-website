@@ -2,7 +2,8 @@
 
 <div align="center">
 
-![license-shield]
+<!-- ![license-shield] -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/GDSCITM/GDSCITM-official-website/blob/main/LICENSE)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
