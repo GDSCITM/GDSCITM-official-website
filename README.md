@@ -153,6 +153,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 [![instagram](https://img.shields.io/badge/instagram-cd486b?style=for-the-badge&logo=instagram&logoColor=pink)](https://www.instagram.com/gdscitm?r=nametag)
 
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/agGwYPhk9k)
+
 
 
 
