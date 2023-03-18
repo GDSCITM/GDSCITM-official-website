@@ -10,11 +10,12 @@ import { useTheme } from "@mui/material/styles"
 import MenuIcon from '@mui/icons-material/Menu';
 
 
+
 export default function Header(props) {
   const classes = useStyles();
   var theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('900'));
-  const heading = useMediaQuery(theme.breakpoints.up('361'));
+  const heading = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <AppBar
@@ -25,13 +26,16 @@ export default function Header(props) {
       <Toolbar>
         <img src={"images/GDSC LOGO 1.svg"} height={"65px"} />
         <Typography>
-          <div className={classes.heading} style={{fontSize:heading?24:16}}>
+          <div className={classes.heading} style={{fontSize:heading?24:17}}>
             <div>Google Developer Student Club</div>
-            <div style={{ color: "#959595", fontSize: "14.74px" }}>
+            <div style={{ color: "#959595", fontSize: heading?"14.74px":"13px" }}>
               ITM Gwalior
             </div>
           </div>
         </Typography>
+        
+    
+     
 
         <Grid
           direction="row"
