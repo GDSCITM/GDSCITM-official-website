@@ -33,7 +33,7 @@ const theme = createTheme({
     teamsBackground: "#EAEAEA",
   },
   typography: {
-    fontFamily: "Roboto",
+    fontFamily: "Google Sans",
     h1: {
       fontFamily: "Ag",
       fontSize: "50px",
