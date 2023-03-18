@@ -153,7 +153,7 @@ export default function SliderComponent() {
                 fontSize: "15.68px",
                 fontWeight: "bold",
                 marginTop: "9px",
-                fontFamily: "Roboto",
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
               }}
               component="div"
             >
@@ -167,7 +167,7 @@ export default function SliderComponent() {
                 fontSize: "12.54px",
                 color: "#333333",
                 marginTop: "9px",
-                fontFamily: "Roboto",
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
               }}
               component="div"
             >
