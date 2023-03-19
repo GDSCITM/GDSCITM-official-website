@@ -57,7 +57,7 @@ const AboutSection = () => {
           >
             What we do and How we are so good at it... !
           </Typography>
-          <div style={{ paddingTop: "65px" }}>
+          <div style={{ paddingTop: "55px", paddingBottom: "10px" }}>
             <Typography
               variant="h4"
               component="h4"
