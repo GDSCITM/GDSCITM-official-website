@@ -72,20 +72,34 @@ const AboutSection = () => {
             >
               What is GDSC?
             </Typography>
-            <Typography variant="h6" color="GrayText">
+            <Typography
+              sx={{ fontFamily: "Roboto, Helvetica, Arial, sans-serif" }}
+              variant="h6"
+              color="GrayText"
+            >
               Google collaborates with university students who are passionate
               about growing developer communities. GDSC is focused upon building
               technical and non-technical skills, which would help students to
               build a better community.
             </Typography>
-            <Typography variant="h6" color="GrayText" sx={{ marginY: "1em" }}>
+            <Typography
+              variant="h6"
+              color="GrayText"
+              sx={{
+                marginY: "1em",
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+              }}
+            >
               # Lets Learn, Grow and Innovate together.
             </Typography>
             <Button
               size="large"
               variant="contained"
               startIcon={<OpenInNewIcon />}
-              sx={{ marginTop: "50px" }}
+              sx={{
+                marginTop: "50px",
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+              }}
             >
               Know More
             </Button>
