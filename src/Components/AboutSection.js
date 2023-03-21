@@ -8,6 +8,7 @@ const useStyles = makeStyles(() => ({
   letter: {
     fontSize: 48,
     fontWeight: "bold",
+    fontFamily: "Google Sans",
   },
   aboutImage: {
     width: "100%",
@@ -34,14 +35,25 @@ const AboutSection = () => {
             sx={{
               fontSize: { xs: "40px", sm: "48px" },
               fontWeight: "bold",
+              fontFamily: "Roboto, Helvetica, Arial, sans-serif",
             }}
           >
-            <span className={classes.letter}>A</span>bout The Community
+            <span
+              style={{ fontFamily: "Roboto, Helvetica, Arial, sans-serif" }}
+              className={classes.letter}
+            >
+              A
+            </span>
+            bout The Community
           </Typography>
           <Typography
             variant="h5"
             color="textSecondary"
-            sx={{ fontSize: { xs: "16px", sm: "20px" }, marginTop: "0.5em" }}
+            sx={{
+              fontSize: { xs: "16px", sm: "20px" },
+              marginTop: "0.5em",
+              fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+            }}
           >
             What we do and How we are so good at it... !
           </Typography>
@@ -55,24 +67,39 @@ const AboutSection = () => {
                   xs: "25px",
                   sm: "35px",
                 },
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
               }}
             >
               What is GDSC?
             </Typography>
-            <Typography variant="h6" color="GrayText">
+            <Typography
+              sx={{ fontFamily: "Roboto, Helvetica, Arial, sans-serif" }}
+              variant="h6"
+              color="GrayText"
+            >
               Google collaborates with university students who are passionate
               about growing developer communities. GDSC is focused upon building
               technical and non-technical skills, which would help students to
               build a better community.
             </Typography>
-            <Typography variant="h6" color="GrayText" sx={{ marginY: "1em" }}>
+            <Typography
+              variant="h6"
+              color="GrayText"
+              sx={{
+                marginY: "1em",
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+              }}
+            >
               # Lets Learn, Grow and Innovate together.
             </Typography>
             <Button
               size="large"
               variant="contained"
               startIcon={<OpenInNewIcon />}
-              sx={{ marginTop: "50px" }}
+              sx={{
+                marginTop: "50px",
+                fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+              }}
             >
               Know More
             </Button>
