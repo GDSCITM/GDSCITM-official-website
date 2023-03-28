@@ -1,0 +1,178 @@
+
+.grid_container>div{
+    background-color: #525252;
+    color: #D4D4D4;
+    height: 325px;
+}
+.grid_container{
+    background-color: #525252;
+    min-height: min-content;
+    margin-top: 50px;
+}
+/* === FOOTER Box 1 - Contact Section === */
+.grid_container__box1{
+   display: flex;
+}
+.grid_container__box1>div{
+    width: 350px;
+    height: 250px;
+}
+/* ==== Footer Left Section ==== */
+/* === Logo Container === */
+.grid_container__box1__logo_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100px !important;
+}
+.grid_container__box1__logo_container>div{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+/* === Commonn Boder to Box1(left) and Box3(right) === */
+.grid_container__box1,.grid_container__box3{
+    border-bottom: 1px solid #fff;
+}
+/* === Text Container === */
+.grid_container__box1__text_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.grid_container__box1__text_container>div{
+    width: 100%;
+}
+.grid_container__box1__text_container>.gdsc_title{
+    color: #fff !important;
+}
+.grid_container__box1__text_container__email>div{
+    margin-top: 10px;
+    margin-left: -7px;
+}
+.socialIcon{
+    font-size: 22px !important;
+    padding-left: 5px;
+}
+/* === FOOTER Box 3 - Menu Section === */
+.grid_container__box3{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.grid_container__box3>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 250px;
+    width: 50%;    
+}
+.grid_container__box3__programs{
+    margin-top: 6px;
+    margin-left: -70px;
+}
+/* ==== Box 2(middle section) ==== */
+.grid_container__box2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+.grid_container__box2>.grid_container__box2__middle{
+    border: 1.2px solid #fff;
+    background-color: inherit;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 140px;
+}
+.grid_container__box2>div{
+    position: absolute;
+    background-color: #fff;
+    height: 1.2px;
+    width: 191px;
+    margin-top: 10px;
+}
+/* === Line 1 === */
+.grid_container__box2>.grid_container__box2__line1{
+    top: 2.5em;
+    left: -2.4em;
+    width: 210px !important;
+    transform: rotate(35deg);
+}
+
+/* === Line 2 === */
+.grid_container__box2>.grid_container__box2__line2{
+    bottom: 3.0625em;
+    left: -1.4375em;
+    transform: rotate(328.5deg);
+}
+/* === Line 3 === */
+.grid_container__box2>.grid_container__box2__line3{
+    top: 2.475em;
+    right: -2.525em;
+    transform: rotate(326deg);
+    width: 13.25em !important;
+}
+/* === Line 4 === */
+.grid_container__box2>.grid_container__box2__line4{
+    bottom: 2.85em;
+    right: -1.6em;
+    transform: rotate(33.7deg);
+    width: 12.2em !important;
+}
+/* === Copy Right === */
+.gdsc__copyright{
+    position: relative;
+    bottom: 20px;
+    left: 46%;
+}
+/* ==== Responsive ==== */
+@media screen and (max-width: 600px) {
+    /* === Middle Box and lines === */
+    .grid_container__box2{
+        background-color: #525252;
+        height: 70px !important;
+    }
+    .grid_container__box2__line1,.grid_container__box2__line2,.grid_container__box2__line3,.grid_container__box2__line4{
+        display: none;
+    }
+    .grid_container__box3{
+        margin-top: -50px !important;
+        align-items: center;
+        background-color: #525252;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: center;
+        text-align: center;
+        height: 620px;
+    }
+    .grid_container__box3__programs{
+        
+      margin-left: 0px !important;
+    }
+    /* === Commonn Boder to Box1(left) and Box3(right) === */
+   .grid_container__box1,.grid_container__box3{
+      border: none;
+    }
+    /* === Social Icon === */
+   .grid_container__box1__text_container__email>.socialIcon{
+      margin-top: 20px;
+    }
+    .socialIcon{
+      padding-right: 20px !important;
+    }
+    .socialIcon:nth-child(5){
+      padding-left: 20px !important;
+    }
+    /* === Copy Right === */
+    .gdsc__copyright{
+      top: -40px;
+      left: 36%;
+    }
+    
+}
