@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -53,56 +54,66 @@
   z-index: 2;
 }
 
+.welcomeMessage {
+  margin-top: "20px",
+}
+
 .secondContentImage {
   width: 565px;
   height: 565px;
-  margin-top: 45px;
-  margin-left: 25px;
+  /* margin-top: 45px; */
+  /* margin-left: 25px; */
 }
 
 @media screen and (min-width: 900px) {
-    .aboutGrid {
-        padding: 32px 0px 0px 115px;
-    }
+  .aboutGrid {
+    padding: 32px 0px 0px 115px;
+  }
 
-    .mainContentText {
-      margin-top: 50px;
-      margin-left: 50px;
-    }
+  .mainContentText {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
 }
 
 @media screen and (max-width: 898px) {
-    .secondContentImage {
-      width: 450px;
-      height: 450px;
-      margin-top: 150px;
-      margin-left: 45px;
-    }
+  .secondContentImage {
+    width: 450px;
+    height: 450px;
+    /* margin-top: 150px; */
+    /* margin-left: 45px; */
+    margin-bottom: 45px;
+    max-width: 100%;
+    height: auto;
+  }
 
-    .mainContentText {
-      margin-top: 50px;
-      margin-left: 50px;
-    }
+  .mainContentText {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .backgroundImage {
-      height: 1120px;
-    }
+  .backgroundImage {
+    height: auto;
+  }
 
-    .mainContentText {
-      margin-top: 200px;
-      margin-left: 100px;
-    }
+  .mainContentText {
+    margin-top: 160px;
+    margin-left: 80px;
+  }
 
-    .mainGrid {
-      margin-top: 0px !important;
-    }
+  .mainGrid {
+    margin-top: 0px !important;
+  }
+  .welcomeMessage {
+    margin-top: 0
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .mainContentText {
-      margin-top: 51px;
-      margin-left: 247px;
-    }
+  .mainContentText {
+    margin-top: 51px;
+    margin-left: 247px;
+  }
 }
