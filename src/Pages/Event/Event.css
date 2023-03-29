@@ -213,6 +213,72 @@
     letter-spacing: 0.05em;
     color: #fafafa;
   }
-  .card-left {
+  .know-ele {
+    margin: 0;
+    margin-top: 16px;
   }
+}
+/*================================Mobile design=========================*/
+.mobileCard {
+  display: flex;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -2.64529px 2.64529px 9.91984px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.cardLeft {
+}
+.cardLeft__info {
+  height: 100%;
+  border-radius: 10px 24px 24px 10px;
+  display: flex;
+  align-items: center;
+}
+.cardLeft-bar {
+  width: 2px;
+  background: #ffffff;
+  height: 80%;
+  margin-left: 12px;
+}
+.cardLeft-date {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  max-width: 58px;
+  padding-left: 12px;
+}
+.cardRight {
+  padding-left: 13px;
+  padding-top: 12px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.cardRight-name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.cardRight-info {
+  max-width: 203px;
+  max-height: 42px;
+  overflow: hidden;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #525252;
+}
+.know-ele {
 }
