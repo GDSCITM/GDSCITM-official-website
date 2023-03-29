@@ -36,6 +36,7 @@ const AboutSection = () => {
               fontSize: { xs: "40px", sm: "48px" },
               fontWeight: "bold",
               fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+              paddingTop: { xs: "2.5rem", sm: "2.67rem" },
             }}
           >
             <span
