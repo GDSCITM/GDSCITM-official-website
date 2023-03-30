@@ -75,7 +75,6 @@
 }
 .upcomming {
   height: 800px;
-
   display: flex;
   margin-left: 11%;
   margin-right: 9%;
@@ -216,6 +215,9 @@
   .know-ele {
     margin: 0;
     margin-top: 16px;
+  }
+  .upcomming {
+    gap: 30px;
   }
 }
 /*================================Mobile design=========================*/
