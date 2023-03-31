@@ -217,7 +217,13 @@
     margin-top: 16px;
   }
   .upcomming {
-    gap: 30px;
+    column-gap: 0px;
+    row-gap: 30px;
+    margin: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 /*================================Mobile design=========================*/
@@ -227,6 +233,9 @@
   background: #ffffff;
   box-shadow: -2.64529px 2.64529px 9.91984px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  width: 70%;
+  max-width: 400px;
+  margin: 0px auto;
 }
 .cardLeft {
 }
@@ -235,6 +244,7 @@
   border-radius: 10px 24px 24px 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .cardLeft-bar {
   width: 2px;
@@ -252,6 +262,12 @@
   color: #ffffff;
   max-width: 58px;
   padding-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardLeft-date h3 p {
+  margin: 0;
 }
 .cardRight {
   padding-left: 13px;
@@ -283,4 +299,5 @@
   color: #525252;
 }
 .know-ele {
+  margin-bottom: 9px;
 }
