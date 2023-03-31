@@ -40,8 +40,8 @@ export default function Home(props) {
 
   return (
     <>
-      <Header />
-      <Grid className="mainGrid" sx={{ overflow: "hidden", marginTop: '65px' }}>
+      <Header/>
+      <Grid className="mainGrid" sx={{ overflow: "hidden", marginTop: '65px' }} id="home">
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 2 }} className="backgroundImage" sx={{ backgroundImage: { xs: "url('/images/header/background_ext.svg')", sm: "url('/images/header/background.svg')", md: "url('/images/header/background.svg')"} }}>
           <Grid item xs={12} sm={6} md={6}>
               <div className="mainContentText">

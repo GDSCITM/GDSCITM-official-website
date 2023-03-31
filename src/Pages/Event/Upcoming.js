@@ -4,8 +4,8 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 
 function Upcoming({anime}) {
-  // const[data1,setData]=useState([]);
-  console.log(anime)
+  
+ 
   
   
   return (

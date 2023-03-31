@@ -9,12 +9,29 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 
+
 export default function Header(props) {
   const classes = useStyles();
   var theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("900"));
   const heading = useMediaQuery(theme.breakpoints.up("sm"));
 
+  const handleHome=()=>{
+    const anchor = document.querySelector('#home')
+  anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+  const handleScroll=()=>{
+  const anchor = document.querySelector('#event')
+  anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+  const handleAbout=()=>{
+    const anchor = document.querySelector('#about')
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+  const handleTeam=()=>{
+    const anchor = document.querySelector('#team')
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
   return (
     <AppBar
       position="fixed"
@@ -57,10 +74,11 @@ export default function Header(props) {
             justifyContent: "flex-end",
           }}
         >
-          <Grid className={classes.link}>Home</Grid>
-          <Grid className={classes.link}>About</Grid>
-          <Grid className={classes.link}>Event</Grid>
-          <Grid className={classes.link}>Teams</Grid>
+          <Grid className={classes.link} onClick={handleHome}>Home</Grid>
+          <Grid className={classes.link} onClick={handleAbout}>About</Grid>
+       <Grid className={classes.link} onClick={handleScroll}>Event</Grid>
+     
+      <Grid className={classes.link} onClick={handleTeam}>Teams</Grid>
 
           <Grid className={classes.link}>
             <Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
