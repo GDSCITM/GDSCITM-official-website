@@ -21,7 +21,10 @@ const MobileUpcoming = ({ data }) => {
         </div>
       </div>
       <div className="cardRight">
-        <div className="cardRight-name">Orientation Session</div>
+        <div className="cardRight_textbox">
+          <div className="cardRight-name">Orientation Session</div>
+          <div className="cardRight-time">10 -- 11 am</div>
+        </div>
         <p className="cardRight-info">{anime.text}</p>
         <div className="know-ele" style={{ backgroundColor: anime.color }}>
           <OpenInNewIcon />

@@ -301,3 +301,18 @@
 .know-ele {
   margin-bottom: 9px;
 }
+
+.cardRight_textbox {
+  display: flex;
+  gap: 28px;
+}
+.cardRight-time {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
