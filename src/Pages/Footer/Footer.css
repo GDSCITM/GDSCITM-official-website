@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 
 .grid_container>div{
     background-color: #525252;
@@ -59,6 +61,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
 }
 .grid_container__box3>div{
     display: flex;
@@ -125,6 +128,12 @@
     transform: rotate(33.7deg);
     width: 12.2em !important;
 }
+
+.grid_subcontainer__box3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 /* === Copy Right === */
 .gdsc__copyright{
     position: relative;
@@ -132,7 +141,13 @@
     left: 46%;
 }
 /* ==== Responsive ==== */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+    /* === Left Most Box === */
+    .grid_container__box1{
+        align-items: center;
+        justify-content: center;
+    }
+
     /* === Middle Box and lines === */
     .grid_container__box2{
         background-color: #525252;
@@ -151,10 +166,18 @@
         text-align: center;
         height: 620px;
     }
+
+    .grid_subcontainer__box3 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: -15%;
+    }
     .grid_container__box3__programs{
         
       margin-left: 0px !important;
     }
+
     /* === Commonn Boder to Box1(left) and Box3(right) === */
    .grid_container__box1,.grid_container__box3{
       border: none;
@@ -171,8 +194,9 @@
     }
     /* === Copy Right === */
     .gdsc__copyright{
-      top: -40px;
-      left: 36%;
+      left: 42%;
+      justify-content: center;
     }
     
+
 }

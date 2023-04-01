@@ -32,7 +32,7 @@ export default function Footer() {
   
     return(
     <div className="grid_container">
-        <Grid container spacing={1} >
+        <Grid container spacing={1}>
             {/* === Footer Left Section === */}
             <Grid item lg={4} xs={12}>
                 <div className="grid_container__box1"> 
@@ -90,10 +90,12 @@ export default function Footer() {
                 <div className="grid_container__box3">
                     <div>
                         <Typography variant="subtitle1">Quick Links</Typography>
+                        <div className='grid_subcontainer__box3'>
                         <Typography variant="body2">Home</Typography>
                         <Typography variant="body2">About</Typography>
                         <Typography variant="body2">Events</Typography>
                         <Typography variant="body2">Teams</Typography>
+                        </div>
                     </div>
                     <div className="grid_container__box3__programs">
                     <Typography variant="subtitle1">Programs</Typography>
