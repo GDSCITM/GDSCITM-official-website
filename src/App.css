@@ -7,6 +7,13 @@
   pointer-events: none;
 }
 
+.welcomeTitle {
+  text-align: -webkit-left;
+}
+.knowMore {
+  margin: 20 !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -55,7 +62,7 @@
 }
 
 .welcomeMessage {
-  margin-top: "20px",
+  margin-top: "20px";
 }
 
 .secondContentImage {
@@ -107,7 +114,13 @@
     margin-top: 0px !important;
   }
   .welcomeMessage {
-    margin-top: 0
+    margin-top: 0;
+  }
+  .welcomeTitle {
+    text-align: center;
+  }
+  .buttonAlignment {
+    height: 100% !important;
   }
 }
 
