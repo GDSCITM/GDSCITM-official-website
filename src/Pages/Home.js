@@ -1,5 +1,5 @@
 import Header from "../Components/Header";
-import { Grid, TextField, InputAdornment, Typography } from "@mui/material";
+import { Grid, TextField, InputAdornment } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import KeyBoardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { makeStyles } from "@mui/styles";
@@ -9,8 +9,8 @@ import AboutSection from "../Components/AboutSection";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { useRef } from "react";
-import "../App.css";
-import "./Home.css";
+import '../App.css';
+import './Home.css'
 
 const useStyles = makeStyles({
   inputrField: {
@@ -20,16 +20,19 @@ const useStyles = makeStyles({
     letterSpacing: "0.1em",
     fontWeight: 400,
     outline: "none",
-  },
+  }
 });
+
 
 export default function Home(props) {
   const classes = useStyles();
   const theme = useTheme();
+  
 
   //for making responsive text
   const matches = useMediaQuery(theme.breakpoints.down("1100"));
 
+  
   //for making responsive input field
   const input = useMediaQuery(theme.breakpoints.down("900"));
 
@@ -38,59 +41,33 @@ export default function Home(props) {
   return (
     <>
       <Header />
-      <Grid className="mainGrid" sx={{ overflow: "hidden", marginTop: "65px" }}>
-        <Grid
-          container
-          rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 1, md: 2 }}
-          className="backgroundImage"
-          sx={{
-            backgroundImage: {
-              xs: "url('/images/header/background_ext.svg')",
-              sm: "url('/images/header/background.svg')",
-              md: "url('/images/header/background.svg')",
-            },
-          }}
-        >
+      <Grid className="mainGrid" sx={{ overflow: "hidden", marginTop: '65px' }}>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 2 }} className="backgroundImage" sx={{ backgroundImage: { xs: "url('/images/header/background_ext.svg')", sm: "url('/images/header/background.svg')", md: "url('/images/header/background.svg')"} }}>
           <Grid item xs={12} sm={6} md={6}>
-            <div className="mainContentText">
-              <Grid className="welcomeMessage">
-                <Typography
-                  className="welcomeTitle"
-                  style={{ fontWeight: "normal", fontSize: "16px" }}
-                >
+              <div className="mainContentText">
+                <Grid className="welcomeMessage" style={{ fontWeight: "normal", fontSize: "16px" }}>
                   come ! join us in this journey of
-                </Typography>
-              </Grid>
-              <Grid
+                </Grid>
+                <Grid
                 className="welcomeMessage "
-                style={{
-                  fontWeight: "bold",
-                  fontSize: matches ? 45 : 80,
-                  lineHeight: "1.2em",
-                  textAlign: "center",
-                }}
-              >
-                <Typography
-                  className="welcomeTitle"
                   style={{
                     fontWeight: "bold",
                     fontSize: matches ? 45 : 80,
-                    lineHeight: "1.2em",
+                    lineHeight: "1.2em",                   
+                  }}
+                >                 
+                    Beginning of Infinity.
+                  
+                </Grid>
+                
+                <Grid
+                  sx={{
+                    position: "relative",
+                    maxWidth: input ? "150px" : "250px",
+                    marginTop: "18px"
                   }}
                 >
-                  Beginning of Infinity.
-                </Typography>
-              </Grid>
-
-              <Grid
-                sx={{
-                  position: "relative",
-                  maxWidth: input ? "150px" : "250px",
-                  marginTop: "18px",
-                }}
-              >
-                {/* <TextField
+                  {/* <TextField
                     label="xyz@gmail.com"
                     variant="outlined"
                     fullWidth
@@ -126,95 +103,93 @@ export default function Home(props) {
                     }}
                   /> */}
 
-                <input
-                  placeholder="xyz@gmail.com"
-                  className={classes.inputrField}
-                  style={{
-                    fontSize: input ? "12px" : "16px",
-                    padding: input
-                      ? "10px 100px 10px 14px"
-                      : "10px 190px 10px 14px",
-                    marginLeft: 20,
-                  }}
-                  ref={ref}
-                />
-                <div
-                  className="buttonAlignment"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    right: 0,
-                    left: 0,
-                    textAlign: "right",
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    width: input ? 265 : 455,
-                    height: "100%",
-                    marginLeft: 20,
-                  }}
-                >
-                  <button
-                    className="letsGoBtn"
+                  <input
+                    placeholder="xyz@gmail.com"
+                    className={classes.inputrField}
                     style={{
-                      display: "flex",
-                      border: 0,
-                      borderRadius: 10,
-                      backgroundColor: "#2785FC",
-                      color: "#fff",
-                      cursor: "pointer",
-                      padding: "10px 20px",
-                      fontSize: input ? "9px" : "16.8px",
-                      fontWeight: "bold",
-                      alignItems: "center",
+                      fontSize: input ? "12px" : "16px",
+                      padding: input
+                        ? "10px 100px 10px 14px"
+                        : "10px 190px 10px 14px",
                     }}
-                    onClick={() => (ref.current.value = "")}
-                  >
-                    {input ? "Lets Go!" : "Lets Get Started!"}
-                  </button>
-                  <button
-                    style={{
-                      display: input ? "none" : "none",
-                      border: 0,
-                      borderRadius: 10,
-                      backgroundColor: "#2785FC",
-                      color: "#fff",
-                      cursor: "pointer",
-                      padding: "10px 20px",
-                      fontSize: input ? "12px" : "16.8px",
-                      position: "absolute",
-                      top: 0,
-                      right: 0,
-                      height: "100%",
-                      fontWeight: "bold",
-                      marginLeft: 20,
-                    }}
-                    onClick={() => (ref.current.value = "")}
-                  >
-                    Lets Go!
-                  </button>
-                </div>
+                    ref={ref}  
+                  />
+                  <div
+                 
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        right: 0,
+                        left: 0,
+                        textAlign: 'right',
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        width: input ? 265 : 455,
+                        height: '100%'
+                      }}>
+                    <button
+                     className="letsGoBtn"
+                      style={{
+                        display: "flex",
+                        border: 0,
+                        borderRadius: 10,
+                        backgroundColor: "#2785FC",
+                        color: "#fff",
+                        cursor: "pointer",
+                        padding: "10px 20px",
+                        fontSize: input ? "9px" : "16.8px",
+                        fontWeight: "bold",
+                        alignItems: 'center'
+                      }}
+                      onClick={() => ref.current.value = ""} 
+                    >
+                      {input ? 'Lets Go!' : 'Lets Get Started!'}
+                    </button>
+                    <button
+                    
+                      style={{
+                        display: input ? "none" : "none",
+                        border: 0,
+                        borderRadius: 10,
+                        backgroundColor: "#2785FC",
+                        color: "#fff",
+                        cursor: "pointer",
+                        padding: "10px 20px",
+                        fontSize: input ? "12px" : "16.8px",
+                        position: "absolute",
+                        top: 0,
+                        right: 0,
+                        height: "100%",
+                        fontWeight: "bold",
+                      }}
+                      onClick={() => ref.current.value = ""} 
+                    >
+                      Lets Go!
+                    </button>
+                  </div>
+                </Grid>
 
+                
                 <Grid
-                  className="knowMore"
                   style={{
                     color: "#666668",
+                    marginTop: "18px",
                     display: "flex",
-                    fontSize: "14px",
-                    alignItems: "center",
-                    whiteSpace: "nowrap",
-                    float: "right",
+                    fontSize: '14px',
+                    alignItems: "center"
                   }}
+                 
                 >
                   Know more
                   {/* <IconButton> */}
                   <KeyBoardArrowDownIcon />
                   {/* </IconButton> */}
                 </Grid>
-              </Grid>
-            </div>
+              </div>
           </Grid>
           <Grid item xs={12} sm={6} md={6}>
-            <img
+            
+            <img 
               className={"secondContentImage img-fluid"}
               src={"images/header/googleHomeboy.png"}
               alt="People holding hands"
