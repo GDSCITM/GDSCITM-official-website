@@ -248,10 +248,10 @@ export default function SliderComponent() {
       </Grid>
       <div style={{ marginTop: "60px", position: "relative" }}>
         <Slider {...settings} ref={rs}>
-          <Grid container sx={{ display: "flex !important" }}>
+          <Grid container sx={{ repeat(auto-fill, minmax(22rem, 2fr)) }}>
             {showComponent()}
           </Grid>
-          <Grid container sx={{ display: "flex !important" }}>
+          <Grid container sx={{ repeat(auto-fill, minmax(22rem, 2fr))}}>
             {showComponent()}
           </Grid>
         </Slider>
