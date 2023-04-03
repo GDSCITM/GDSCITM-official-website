@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Link } from "@mui/material";
 import { useStyles } from "./HeaderCss";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -14,6 +14,7 @@ export default function Header(props) {
 	var theme = useTheme();
 	const matches = useMediaQuery(theme.breakpoints.up("900"));
 	const heading = useMediaQuery(theme.breakpoints.up("sm"));
+	const [menuBtnClick, setMenuBtnClick] = useState(false); //STATE TO TOGGLE MENU BTN IN MOBILE VIEW
 
 	return (
 		<AppBar
@@ -75,6 +76,7 @@ export default function Header(props) {
 					</Grid>
 				</Grid>
 
+				{/* POPUP FOR NAV LINKS IN MOBILE VIEW  */}
 				<Grid
 					direction="row"
 					justifyContent="flex-end"
@@ -85,7 +87,39 @@ export default function Header(props) {
 						justifyContent: "flex-end",
 						color: "#000",
 					}}>
-					<MenuIcon />
+					<MenuIcon onClick={() => setMenuBtnClick(!menuBtnClick)} />
+					<Grid
+						className={classes.popUpMobile}
+						direction="column"
+						justifyContent="space-between"
+						alignItems="center"
+						style={{
+							display: menuBtnClick ? "flex" : "none",
+						}}>
+						<Typography className={classes.linkMobile}>
+							Home
+						</Typography>
+						<Typography className={classes.linkMobile}>
+							About
+						</Typography>
+						<Typography className={classes.linkMobile}>
+							Event
+						</Typography>
+						<Typography className={classes.linkMobile}>
+							Teams
+						</Typography>
+						<Grid className={classes.linkMobile}>
+							<Button
+								variant="contained"
+								style={{ backgroundColor: "#2785FC" }}>
+								<a
+									href="https://gdsc.community.dev/institute-of-technology-and-management-gwalior/"
+									target="_blank">
+									Join Us
+								</a>
+							</Button>
+						</Grid>
+					</Grid>
 				</Grid>
 			</Toolbar>
 		</AppBar>
