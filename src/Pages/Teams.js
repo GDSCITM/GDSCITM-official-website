@@ -4,7 +4,7 @@ import SliderComponent from "../Components/SliderComponent";
 
 export default function Teams() {
   return (
-    <Grid>
+    <Grid id='teams'>
       <Grid rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 1 }} sx={{ overflow: "hidden", background : `url(${"images/LeftImage.svg"})`, backgroundRepeat : "repeat-x", backgroundSize : "600px", marginTop: '86px' }}>
         <Grid
           style={{

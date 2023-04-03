@@ -47,7 +47,7 @@ function Event() {
     }, [chosen])
 
   return (
-    <div className='event-ele'>
+    <div className='event-ele' id='event'>
         <div className='event-tag'>
             <div className='img1'>
                 <div className='img11'></div>
