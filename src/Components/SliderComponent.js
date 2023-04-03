@@ -12,6 +12,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { IconButton, Grid, Divider, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from '@mui/icons-material/GitHub';
 export default function SliderComponent() {
   var rs = useRef();
   var reviews = [
@@ -186,6 +187,7 @@ export default function SliderComponent() {
             >
               <LinkedInIcon fontSize="large" />
               <TwitterIcon fontSize="large" />
+              <GitHubIcon fontSize="large" />
             </Typography>
           </Box>
         </Box>
