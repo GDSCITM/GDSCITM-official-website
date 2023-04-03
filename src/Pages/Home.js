@@ -1,4 +1,4 @@
-import Header from "../Components/Header";
+import HeaderTwo from "../Components/Alternative/Header";
 import { Grid, TextField, InputAdornment, Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import KeyBoardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -37,7 +37,7 @@ export default function Home(props) {
 
   return (
     <>
-      <Header />
+      <HeaderTwo />
       <Grid className="mainGrid" sx={{ overflow: "hidden", marginTop: "65px" }}>
         <Grid
           container
@@ -83,7 +83,7 @@ export default function Home(props) {
                 </Typography>
               </Grid>
 
-            
+
 
               <Grid
                 sx={{
@@ -92,7 +92,7 @@ export default function Home(props) {
                   marginTop: "18px",
                 }}
               >
-                
+
                 {/* <TextField
                     label="xyz@gmail.com"
                     variant="outlined"
@@ -128,8 +128,8 @@ export default function Home(props) {
                       ),
                     }}
                   /> */}
-           
-            <input
+
+                <input
                   placeholder="xyz@gmail.com"
                   className={classes.inputrField}
                   style={{
@@ -137,16 +137,16 @@ export default function Home(props) {
                     padding: input
                       ? "10px 100px 10px 14px"
                       : "10px 190px 10px 14px",
-                   
-                         position: "relative",
+
+                    position: "relative",
                     zIndex: 1,
-                    top: 0, 
-                  
+                    top: 0,
+
                   }}
                   ref={ref}
                 />
-                 
-                 
+
+
                 <div
                   className="buttonAlignment"
                   style={{
@@ -157,15 +157,15 @@ export default function Home(props) {
                     textAlign: "right",
                     display: "flex",
                     justifyContent: "flex-end",
-                     width: input ? 180 : 190,
-                   
+                    width: input ? 180 : 190,
+
                     height: "100%",
                     marginLeft: 300,
                     zIndex: 3,
                   }}
                 >
-                    
-                
+
+
                   <button
                     className="letsGoBtn"
                     style={{
@@ -225,7 +225,7 @@ export default function Home(props) {
                 </Grid>
               </Grid>
             </div>
-        
+
           </Grid>
           <Grid item xs={12} sm={6} md={6}>
             <img
