@@ -64,9 +64,7 @@ export default function Header(props) {
 					<Grid className={classes.link}>Teams</Grid>
 
 					<Grid className={classes.link}>
-						<Button
-							variant="contained"
-							style={{ backgroundColor: "#2785FC" }}>
+						<Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
 							<a
 								href="https://gdsc.community.dev/institute-of-technology-and-management-gwalior/"
 								target="_blank">
@@ -96,18 +94,10 @@ export default function Header(props) {
 						style={{
 							display: menuBtnClick ? "flex" : "none",
 						}}>
-						<Typography className={classes.linkMobile}>
-							Home
-						</Typography>
-						<Typography className={classes.linkMobile}>
-							About
-						</Typography>
-						<Typography className={classes.linkMobile}>
-							Event
-						</Typography>
-						<Typography className={classes.linkMobile}>
-							Teams
-						</Typography>
+						<Typography className={classes.linkMobile}>Home</Typography>
+						<Typography className={classes.linkMobile}>About</Typography>
+						<Typography className={classes.linkMobile}>Event</Typography>
+						<Typography className={classes.linkMobile}>Teams</Typography>
 						<Grid className={classes.linkMobile}>
 							<Button
 								variant="contained"
