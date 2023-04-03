@@ -40,6 +40,7 @@ export default function Header(props) {
                 color: "#959595",
                 fontSize: "14.74px",
                 fontFamily: "Roboto",
+                paddingTop: "3px",
               }}
             >
               ITM Gwalior

@@ -83,6 +83,8 @@ export default function Home(props) {
                 </Typography>
               </Grid>
 
+            
+
               <Grid
                 sx={{
                   position: "relative",
@@ -90,6 +92,7 @@ export default function Home(props) {
                   marginTop: "18px",
                 }}
               >
+                
                 {/* <TextField
                     label="xyz@gmail.com"
                     variant="outlined"
@@ -125,8 +128,8 @@ export default function Home(props) {
                       ),
                     }}
                   /> */}
-
-                <input
+           
+            <input
                   placeholder="xyz@gmail.com"
                   className={classes.inputrField}
                   style={{
@@ -134,10 +137,16 @@ export default function Home(props) {
                     padding: input
                       ? "10px 100px 10px 14px"
                       : "10px 190px 10px 14px",
-                    marginLeft: 20,
+                   
+                         position: "relative",
+                    zIndex: 1,
+                    top: 0, 
+                  
                   }}
                   ref={ref}
                 />
+                 
+                 
                 <div
                   className="buttonAlignment"
                   style={{
@@ -148,11 +157,15 @@ export default function Home(props) {
                     textAlign: "right",
                     display: "flex",
                     justifyContent: "flex-end",
-                    width: input ? 265 : 455,
+                     width: input ? 180 : 190,
+                   
                     height: "100%",
-                    marginLeft: 20,
+                    marginLeft: 300,
+                    zIndex: 3,
                   }}
                 >
+                    
+                
                   <button
                     className="letsGoBtn"
                     style={{
@@ -212,6 +225,7 @@ export default function Home(props) {
                 </Grid>
               </Grid>
             </div>
+        
           </Grid>
           <Grid item xs={12} sm={6} md={6}>
             <img
