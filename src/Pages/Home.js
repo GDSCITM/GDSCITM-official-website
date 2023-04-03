@@ -137,12 +137,10 @@ export default function Home(props) {
                     padding: input
                       ? "10px 100px 10px 14px"
                       : "10px 190px 10px 14px",
-                    marginLeft: 20,
+                   
                          position: "relative",
                     zIndex: 1,
-                    top: 0,
-                 
-                     
+                    top: 0, 
                   
                   }}
                   ref={ref}
@@ -159,10 +157,10 @@ export default function Home(props) {
                     textAlign: "right",
                     display: "flex",
                     justifyContent: "flex-end",
-                     width: input ? 265 : 455,
+                     width: input ? 180 : 190,
                    
                     height: "100%",
-                    marginLeft: 50,
+                    marginLeft: 300,
                     zIndex: 3,
                   }}
                 >
