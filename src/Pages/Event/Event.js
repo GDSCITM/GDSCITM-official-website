@@ -147,19 +147,19 @@ function Event() {
 
       <div className="list">
         <div
-          className={chosen == "all" ? "active" : "all"}
+          className={chosen === "all" ? "active" : "all"}
           onClick={() => setChosen("all")}
         >
           All
         </div>
         <div
-          className={chosen == "up" ? "active" : "up"}
+          className={chosen === "up" ? "active" : "up"}
           onClick={() => setChosen("up")}
         >
           Upcoming
         </div>
         <div
-          className={chosen == "past" ? "active" : "past"}
+          className={chosen === "past" ? "active" : "past"}
           onClick={() => setChosen("past")}
         >
           Past
