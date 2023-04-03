@@ -17,7 +17,7 @@ export default function Teams() {
           }}
         >
           {/* <img src={LeftImage} style={{ width:1440,height:92 }} /> */}
-
+          
           <Grid
             style={{
               width: 342,
