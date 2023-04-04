@@ -91,7 +91,9 @@ export default function SliderComponent() {
           top: "-7%",
           left: "50%",
           transform: "translatex(-50%)",
-          Zindex: -1,
+          zIndex: -1,
+          
+          
         }}
       >
         <ul style={{ margin: "0px", padding: 0 }}> {dots} </ul>
@@ -118,6 +120,7 @@ export default function SliderComponent() {
           display: "flex",
           justifyContent: "center",
           padding: "30px 0px 30px 0px",
+           pointerEvents: "auto",
         }}
       >
         <Box
@@ -129,6 +132,7 @@ export default function SliderComponent() {
             filter:
               "drop-shadow(-4.40684px 4.40684px 16.5257px rgba(0, 0, 0, 0.1)) drop-shadow(2.20342px -2.20342px 16.5257px rgba(0, 0, 0, 0.1))",
             background: "white",
+        
           }}
         >
           <Box
@@ -141,11 +145,12 @@ export default function SliderComponent() {
               backgroundPosition: "center",
               borderTopLeftRadius: 16,
               borderTopRightRadius: 16,
+         
             }}
           >
             <img style={{ padding: "1rem" }} src={item.image} />
           </Box>
-          <Box style={{ height: 107.39, paddingBottom: "20px" }}>
+          <Box style={{ height: 107.39, paddingBottom: "20px",   }}>
             <Typography
               gutterBottom
               style={{
@@ -174,6 +179,7 @@ export default function SliderComponent() {
             >
               {item.role}
             </Typography>
+        
             <Typography
               variant="body2"
               style={{
@@ -182,12 +188,13 @@ export default function SliderComponent() {
                 gap: "10px",
                 marginTop: "9px",
                 marginBottom: "10px",
+                
               }}
               color="#959595"
             >
-              <LinkedInIcon fontSize="large" />
-              <TwitterIcon fontSize="large" />
-              <GitHubIcon fontSize="large" />
+              <LinkedInIcon fontSize="large" style={{ cursor: "pointer " }} />
+              <TwitterIcon fontSize="large" style={{ cursor: "pointer " }} />
+              <GitHubIcon fontSize="large"  style={{ cursor: "pointer " }} />
             </Typography>
           </Box>
         </Box>
@@ -249,11 +256,11 @@ export default function SliderComponent() {
         </Grid>
       </Grid>
       <div style={{ marginTop: "60px", position: "relative" }}>
-        <Slider {...settings} ref={rs}>
-          <Grid container sx={{ display: "flex !important" }}>
+        <Slider {...settings} ref={rs} >
+          <Grid container sx={{ display: "flex !important" ,  }}>
             {showComponent()}
           </Grid>
-          <Grid container sx={{ display: "flex !important" }}>
+          <Grid container sx={{ display: "flex !important" , }}>
             {showComponent()}
           </Grid>
         </Slider>
