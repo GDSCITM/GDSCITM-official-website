@@ -4,8 +4,7 @@
     left: 0px;
     width: 100%;
     height: auto;
-    max-height: 60px;
-    padding: 10px;
+    max-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +12,7 @@
     overflow: visible;
     z-index: 100;
     backdrop-filter: blur(10px);
+    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
@@ -128,59 +128,74 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
-.mainHeaderLogo {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 0px 20px;
+
+    .mainHeaderLogo {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0px 20px;
+    }
+
+    .mainHeaderLogo img {
+        position: relative;
+        width: 350px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .mainHeaderItem {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHeaderItem p {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        color: #111;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .mainHeaderItem p::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 0px;
+        height: 2px;
+        background-color: black;
+        transition: .2s all ease;
+    }
+
+    .mainHeaderItem p:hover::after {
+        width: 100%;
+    }
+
+    .mainHeaderMobileItem {
+        display: none;
+    }
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainHeaderMobileItem {
+        display: none;
+    }
+
 }
 
-.mainHeaderLogo img {
-    position: relative;
-    width: 350px;
-    height: auto;
-    object-fit: contain;
-}
-
-.mainHeaderItem {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.mainHeaderItem p {
-    position: relative;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    color: #111;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.mainHeaderItem p::after {
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 0px;
-    height: 2px;
-    background-color: black;
-    transition: .2s all ease;
-}
-
-.mainHeaderItem p:hover::after {
-    width: 100%;
-}
-
-.mainHeaderMobileItem {
-    display: none;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainHeaderMobileItem {
+        display: none;
+    }
 
 }
