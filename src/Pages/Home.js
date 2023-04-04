@@ -206,23 +206,24 @@ export default function Home(props) {
                     Lets Go!
                   </button>
                 </div>
-
-                <Grid
-                  className="knowMore"
-                  style={{
-                    color: "#666668",
-                    display: "flex",
-                    fontSize: "14px",
-                    alignItems: "center",
-                    whiteSpace: "nowrap",
-                    float: "right",
-                  }}
-                >
-                  Know more
-                  {/* <IconButton> */}
-                  <KeyBoardArrowDownIcon />
-                  {/* </IconButton> */}
-                </Grid>
+                <a href='#about'>
+                  <Grid
+                    className="knowMore"
+                    style={{
+                      color: "#666668",
+                      display: "flex",
+                      fontSize: "14px",
+                      alignItems: "center",
+                      whiteSpace: "nowrap",
+                      float: "right",
+                    }}
+                  >
+                    Know more
+                    {/* <IconButton> */}
+                    <KeyBoardArrowDownIcon />
+                    {/* </IconButton> */}
+                  </Grid>
+                </a>
               </Grid>
             </div>
         

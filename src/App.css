@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 55px
+}
+
 .App {
   text-align: center;
 }
