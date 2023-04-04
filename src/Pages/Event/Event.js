@@ -2,49 +2,58 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import "./Event.css"
 import Upcoming from './Upcoming'
-
+import events from "./all_event"
 function Event() {
     const[chosen,setChosen]=useState("all"); /*a variable to keep track of the chosen section, like: 'all' or 'upcoming' or 'past' */
-    const[pastData,setPastData]=useState([
-        {id:"1",date:"01",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg1.png",color:"#ffd34e"},
-        {id:"2",date:"02",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg2.png",color:"#f27770"}
-        ,{id:"3",date:"03",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg3.png",color:"#3eaff4"},
-        {id:"4",date:"04",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg4.png",color:"#6ebb71"},
-        {id:"5",date:"06",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg2.png",color:"#f47169"},
-        {id:"6",date:"06",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg1.png",color:"#ffd34e"}
-    ])
+    const [allEvent,setAllEvent] = useState(events);
 
-    const[upcomingdata,setUpcomingData]=useState([
-        {id:"1",date:"11",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg1.png",color:"#ffd34e"},
-        {id:"2",date:"12",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg2.png",color:"#f27770"}
-        ,{id:"3",date:"03",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg3.png",color:"#3eaff4"},
-        {id:"4",date:"04",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg4.png",color:"#6ebb71"},
-        {id:"5",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg2.png",color:"#f47169"},
-        {id:"6",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
-        ,topImage:"/images/bg1.png",color:"#ffd34e"}
-    ])
-    const allEvents = upcomingdata.concat(pastData) 
-    /* allEvents is an array which consists of both upcoming and past events */
-    const [allData, setAllData] = useState(allEvents)
+    const today = new Date(2023,0,1);//for comparing which are the upcoming events and which are past events, can be set to current date using, new Date() only.
 
-    useEffect(() => {
-        setAllData(allData)
-    }, [allData])
+    today.setHours(0,0,0,0);//as the date object created from events object, will not have time part, setting the time to 0 to variable today, so that we can compare date part of our event with today date part
 
-    useEffect(() => {
-        setChosen(chosen)
-    }, [chosen])
+    const filterEvent = chosen==='all'?allEvent:chosen==='up'?allEvent.filter(event => new Date(event.date + event.month)>=today):allEvent.filter(event => new Date(event.date + event.month)<today); //A variable for storing the filtered events in response to whether upcoming or past or all was clicked
+
+
+    // const[pastData,setPastData]=useState([
+    //     {id:"1",date:"01",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg1.png",color:"#ffd34e"},
+    //     {id:"2",date:"02",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg2.png",color:"#f27770"}
+    //     ,{id:"3",date:"03",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg3.png",color:"#3eaff4"},
+    //     {id:"4",date:"04",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg4.png",color:"#6ebb71"},
+    //     {id:"5",date:"06",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg2.png",color:"#f47169"},
+    //     {id:"6",date:"06",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg1.png",color:"#ffd34e"}
+    // ])
+
+    // const[upcomingdata,setUpcomingData]=useState([
+    //     {id:"1",date:"11",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg1.png",color:"#ffd34e"},
+    //     {id:"2",date:"12",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg2.png",color:"#f27770"}
+    //     ,{id:"3",date:"03",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg3.png",color:"#3eaff4"},
+    //     {id:"4",date:"04",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg4.png",color:"#6ebb71"},
+    //     {id:"5",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg2.png",color:"#f47169"},
+    //     {id:"6",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+    //     ,topImage:"/images/bg1.png",color:"#ffd34e"}
+    // ])
+    // const allEvents = upcomingdata.concat(pastData) 
+    // /* allEvents is an array which consists of both upcoming and past events */
+    // const [allData, setAllData] = useState(allEvents)
+
+    // useEffect(() => {
+    //     setAllData(allData)
+    // }, [allData])
+
+    // useEffect(() => {
+    //     setChosen(chosen)
+    // }, [chosen])
 
   return (
     <div className='event-ele'>
@@ -63,7 +72,15 @@ function Event() {
             <div className={chosen === "up"?"active":"up"} onClick={() => setChosen("up")}>Upcoming</div>
             <div className={chosen === "past"?"active":"past"} onClick={() => setChosen("past")}>Past</div>
         </div>
-        {chosen == "all"?
+        
+        <div className='upcomming'>
+        {
+        filterEvent.map(anime=>(
+        <Upcoming key={anime.id} anime={anime}/>
+        ))
+        }
+        </div>
+        {/* {chosen == "all"?
        <div className='upcomming'>
         {
         pastData.map(anime=>(
@@ -92,7 +109,7 @@ function Event() {
         ))
         }
         </div>
-        }
+        } */}
     </div>
   )
 }
