@@ -3,11 +3,12 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Link } from "@mui/material";
 import { useStyles } from "./HeaderCss";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+
 
 export default function Header(props) {
   const classes = useStyles();
@@ -58,10 +59,10 @@ export default function Header(props) {
             justifyContent: "flex-end",
           }}
         >
-          <Grid className={classes.link}>Home</Grid>
-          <Grid className={classes.link}>About</Grid>
-          <Grid className={classes.link}>Event</Grid>
-          <Grid className={classes.link}>Teams</Grid>
+          <Grid className={classes.link}><Link href='#home' color='inherit' underline='none'>Home</Link></Grid>
+          <Grid className={classes.link}><Link href='#about' color='inherit' underline='none'>About</Link></Grid>
+          <Grid className={classes.link}><Link href='#event' color='inherit' underline='none'>Event</Link></Grid>
+          <Grid className={classes.link}><Link href='#teams' color='inherit' underline='none'>Teams</Link></Grid>
 
           <Grid className={classes.link}>
             <Button variant="contained" style={{ backgroundColor: "#2785FC" }}>

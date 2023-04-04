@@ -21,14 +21,14 @@ const useStyles = makeStyles(() => ({
 const AboutSection = () => {
   const classes = useStyles();
   return (
-    <Grid sx={{ overflow: "hidden" }}>
+    <Grid sx={{ overflow: "hidden" }} id='about'>
       <Grid
         container
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 1, md: 2 }}
         className={"aboutGrid"}
       >
-        <Grid item xs={12} sm={12} md={8}>
+        <Grid item xs={12} sm={12} md={8} id="about">
           <Typography
             variant="h2"
             component="h2"

@@ -47,7 +47,7 @@ function Event() {
     }, [chosen])
 
   return (
-    <div className='event-ele'>
+    <div className='event-ele' id='event'>
         <div className='event-tag'>
             <div className='img1'>
                 <div className='img11'></div>
@@ -59,9 +59,9 @@ function Event() {
         </div>
 
         <div className='list'>
-            <div className={chosen == "all"?"active":"all"} onClick={() => setChosen("all")}>All</div>
-            <div className={chosen == "up"?"active":"up"} onClick={() => setChosen("up")}>Upcoming</div>
-            <div className={chosen == "past"?"active":"past"} onClick={() => setChosen("past")}>Past</div>
+            <div className={chosen === "all"?"active":"all"} onClick={() => setChosen("all")}>All</div>
+            <div className={chosen === "up"?"active":"up"} onClick={() => setChosen("up")}>Upcoming</div>
+            <div className={chosen === "past"?"active":"past"} onClick={() => setChosen("past")}>Past</div>
         </div>
         {chosen == "all"?
        <div className='upcomming'>
