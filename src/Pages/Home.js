@@ -38,7 +38,7 @@ export default function Home(props) {
 
   return (
     <>
-      <Header />
+      <HeaderTwo />
       <Grid className="mainGrid" sx={{ overflow: "hidden", marginTop: "65px" }} id="home">
         <Grid
           container
