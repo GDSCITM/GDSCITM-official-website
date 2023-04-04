@@ -14,7 +14,7 @@ export default function HomeTwo() {
                             <input type='text' placeholder='anshitmishra03@gmail.com' />
                             <button >Let's get Started!</button>
                         </div>
-                        <p>know more <KeyBoardArrowDownIcon /></p>
+                        <a href='/#about' ><p>know more <KeyBoardArrowDownIcon /></p></a>
                     </div>
                 </div>
                 <div className={styles.mainHolderTwo}>

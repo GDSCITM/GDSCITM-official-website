@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
 const AboutSection = () => {
   const classes = useStyles();
   return (
-    <Grid sx={{ overflow: "hidden" }}>
+    <Grid sx={{ overflow: "hidden" }} id={"about"}>
       <Grid
         container
         rowSpacing={1}
