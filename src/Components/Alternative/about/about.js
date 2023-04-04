@@ -5,7 +5,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export default function About() {
     return (
-        <div className={styles.main}>
+        <div className={styles.main} id='about'>
             <div className={styles.mainHolder}>
                 <div className={styles.mainHolderOne}>
                     <h1>About The Community</h1>
