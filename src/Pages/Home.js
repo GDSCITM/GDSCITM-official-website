@@ -41,6 +41,7 @@ export default function Home(props) {
     <div style={{position:"relative",width:"100%"}}>
       <HeaderTwo />
       <HomeTwo/>
+      
     </div>
     </>
   );
