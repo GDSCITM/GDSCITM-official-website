@@ -50,7 +50,9 @@
     flex-direction: column;
     gap: 10px;
 }
-
+.mainHolderOneItem a{
+    color: black;
+}
 .mainHolderOneItem p {
     position: relative;
     width: auto;
