@@ -8,7 +8,7 @@ export default function HomeTwo() {
             <div className={styles.mainHolder}>
                 <div className={styles.mainHolderOne}>
                     <div className={styles.mainHolderOneItem}>
-                        <p>come! join us in the jurney of</p>
+                        <p>come! join us in the journey of</p>
                         <h1>Beginning of <br />infinity.</h1>
                         <div className={styles.mainHolderOneItemInput}>
                             <input type='text' placeholder='anshitmishra03@gmail.com' />
