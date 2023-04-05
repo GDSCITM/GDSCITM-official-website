@@ -19,7 +19,7 @@
 
 .mainHolderOne {
     position: relative;
-    width: 50%;
+    width:70%;
     height: auto;
     padding: 10px;
     display: flex;
@@ -53,7 +53,7 @@
 
 .mainHolderTwo {
     position: relative;
-    width: 50%;
+    width: 30%;
     height: auto;
     padding: 10px;
     display: flex;
@@ -204,7 +204,7 @@
 
     .mainHolderOne {
         position: relative;
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -238,7 +238,7 @@
 
     .mainHolderTwo {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -276,7 +276,7 @@
 
     .mainHolderOne {
         position: relative;
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -310,7 +310,7 @@
 
     .mainHolderTwo {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -347,7 +347,7 @@
 
     .mainHolderOne {
         position: relative;
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -381,7 +381,7 @@
 
     .mainHolderTwo {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: auto;
         padding: 10px;
         display: flex;
