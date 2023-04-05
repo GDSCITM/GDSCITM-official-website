@@ -3,6 +3,7 @@ import styles from "./Header.module.css"
 import { Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
+
 export default function HeaderTwo() {
   return (
     <>
@@ -21,7 +22,7 @@ export default function HeaderTwo() {
           <p>Event</p>
           <p>Team</p>
           <Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
-            Join Us
+            <a href=" https://gdsc.community.dev/institute-of-technology-and-management-gwalior/">Join Us</a>
           </Button>
         </div>
      
