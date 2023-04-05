@@ -8,7 +8,9 @@ export default function HeaderTwo() {
     <>
       <div className={styles.main}>
         <div className={styles.mainHeaderLogo} >
-          <img src='images/Logo.svg' alt='GDSC ITM LOGO' />
+          <img src='images/Logo.svg' alt='GDSC ITM LOGO'
+            style={{cursor: "pointer"}} onClick={() => window.scrollTo(0, 0)}
+          />
         </div>
         <div className={styles.mainHeaderMobileItem} >
           <p>
