@@ -21,9 +21,9 @@ export default function HeaderTwo() {
           <p>About</p>
           <p>Event</p>
           <p>Team</p>
-          <Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
-            <a href=" https://gdsc.community.dev/institute-of-technology-and-management-gwalior/">Join Us</a>
-          </Button>
+          <a href=" https://gdsc.community.dev/institute-of-technology-and-management-gwalior/"><Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
+            Join Us
+          </Button></a>
         </div>
      
       </div>
