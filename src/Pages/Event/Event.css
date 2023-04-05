@@ -74,12 +74,13 @@
   color: rgb(44, 44, 196);
 }
 .upcomming {
-  height: 800px;
+  /* height: 800px; */
   display: flex;
   margin-left: 11%;
   margin-right: 9%;
   flex-wrap: wrap;
   gap: 80px;
+  justify-content: space-between;
 }
 
 /* ##############################  upcoming */
