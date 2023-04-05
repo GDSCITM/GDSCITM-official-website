@@ -13,8 +13,8 @@ function Event() {
 
     const filterEvent = chosen==='all'?allEvent:chosen==='up'?allEvent.filter(event => new Date(event.date + event.month)>=today):allEvent.filter(event => new Date(event.date + event.month)<today); //A variable for storing the filtered events in response to whether upcoming or past or all was clicked
 
-      return (
-    <div className='event-ele'>
+  return (
+    <div className='event-ele' id='event'>
         <div className='event-tag'>
             <div className='img1'>
                 <div className='img11'></div>
