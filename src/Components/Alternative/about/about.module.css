@@ -1,0 +1,401 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.mainHolder {
+    position: relative;
+    width: 90%;
+    height: auto;
+    padding: 20px 10px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHolderOne {
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.mainHolderOne h1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 50px;
+}
+
+.mainHolderOne p {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 450;
+    color: #777;
+}
+
+.mainHolderOne h2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+}
+
+.mainHolderTwo {
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHolderTwo img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main {
+        padding: 10px;
+    }
+
+    .mainHolder {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderOne {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        display: flex;
+        gap: 20px;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .mainHolderOne h1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 30px;
+    }
+
+    .mainHolderOne p {
+        position: relative;
+        width: auto;
+        height: auto;
+        font-size: 15px;
+        font-weight: 450;
+        color: #777;
+    }
+
+    .mainHolderOne h2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    .mainHolderTwo img {
+        position: relative;
+        width: auto;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+
+    .mainHolder {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderOne {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        display: flex;
+        gap: 20px;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .mainHolderOne h1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 30px;
+    }
+
+    .mainHolderOne p {
+        position: relative;
+        width: auto;
+        height: auto;
+        font-size: 15px;
+        font-weight: 450;
+        color: #777;
+    }
+
+    .mainHolderOne h2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    .mainHolderTwo img {
+        position: relative;
+        width: auto;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainHolder {
+        position: relative;
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderOne {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .mainHolderOne h1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 40px;
+    }
+
+    .mainHolderOne p {
+        position: relative;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        font-weight: 450;
+        color: #777;
+    }
+
+    .mainHolderOne h2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 35px;
+    }
+
+    .mainHolderTwo {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderTwo img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .mainHolder {
+        position: relative;
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderOne {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .mainHolderOne h1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 40px;
+    }
+
+    .mainHolderOne p {
+        position: relative;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        font-weight: 450;
+        color: #777;
+    }
+
+    .mainHolderOne h2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 30px;
+    }
+
+    .mainHolderTwo {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderTwo img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .mainHolder {
+        position: relative;
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderOne {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .mainHolderOne h1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 45px;
+    }
+
+    .mainHolderOne p {
+        position: relative;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+        font-weight: 450;
+        color: #777;
+    }
+
+    .mainHolderOne h2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        font-size: 35px;
+    }
+
+    .mainHolderTwo {
+        position: relative;
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainHolderTwo img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+
+}

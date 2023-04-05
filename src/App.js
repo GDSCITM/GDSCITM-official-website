@@ -4,17 +4,18 @@ import Home from "./Pages/Home";
 import Teams from "./Pages/Teams";
 import MainPage from "./Components/SliderComponent";
 import Event from "./Pages/Event/Event";
-import Footer from "./Pages/Footer/Footer"
+import Footer from "./Pages/Footer/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
+import About from "./Components/Alternative/about/about";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Home/>
-      <AboutSection />
+      <Home />
+      <About/>
       <Event />
       <Teams />
-      <Footer/>
+      <Footer />
     </ThemeProvider>
   );
 }
