@@ -5,6 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 
+
 export default function HeaderTwo() {
   var theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("768"));
@@ -39,9 +40,9 @@ export default function HeaderTwo() {
           <p>About</p>
           <p>Event</p>
           <p>Team</p>
-          <Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
+          <a href=" https://gdsc.community.dev/institute-of-technology-and-management-gwalior/"><Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
             Join Us
-          </Button>
+          </Button></a>
         </div>
       </div>
       <div
