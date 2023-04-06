@@ -39,8 +39,8 @@
     position: relative;
     width: auto;
     height: auto;
-    font-size: 20px;
-    font-weight: 450;
+    font-size: 17px;
+    font-weight: 400;
     color: #777;
 }
 
@@ -224,8 +224,8 @@
         position: relative;
         width: auto;
         height: auto;
-        font-size: 20px;
-        font-weight: 450;
+        font-size: 17px;
+        font-weight: 400;
         color: #777;
     }
 
@@ -296,7 +296,7 @@
         position: relative;
         width: auto;
         height: auto;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 450;
         color: #777;
     }
@@ -367,8 +367,8 @@
         position: relative;
         width: auto;
         height: auto;
-        font-size: 20px;
-        font-weight: 450;
+        font-size: 17px;
+        font-weight: 400;
         color: #777;
     }
 
