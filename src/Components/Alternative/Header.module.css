@@ -50,6 +50,11 @@
     font-weight: 500;
     cursor: pointer;
 }
+.mainHeaderItem a
+{
+    text-decoration: none;
+    color: white;
+}
 
 .mainHeaderItem p::after {
     content: '';
