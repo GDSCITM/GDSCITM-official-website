@@ -36,7 +36,8 @@
     height: auto;
     display: flex;
     gap: 10px;
-    justify-content: center;
+    margin-right: 20px;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -154,7 +155,8 @@
         height: auto;
         display: flex;
         gap: 10px;
-        justify-content: center;
+        margin-right: 20px;
+        justify-content: flex-end;
         align-items: center;
     }
 
