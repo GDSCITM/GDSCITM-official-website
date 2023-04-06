@@ -74,7 +74,8 @@
   color: rgb(44, 44, 196);
 }
 .upcomming {
-  height: 800px;
+  /* height: 800px; */
+  height: auto;
   display: flex;
   margin-left: 11%;
   margin-right: 9%;

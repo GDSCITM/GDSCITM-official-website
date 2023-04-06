@@ -34,7 +34,8 @@ function Event() {
         {id:"6",date:"06",month:"jan 23",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
         ,topImage:"/images/bg1.png",color:"#ffd34e"}
     ])
-    const allEvents = upcomingdata.concat(pastData) 
+    // const allEvents = upcomingdata.concat(pastData) 
+    const allEvents=[...pastData,...upcomingdata];
     /* allEvents is an array which consists of both upcoming and past events */
     const [allData, setAllData] = useState(allEvents)
 
@@ -63,17 +64,17 @@ function Event() {
             <div className={chosen === "up"?"active":"up"} onClick={() => setChosen("up")}>Upcoming</div>
             <div className={chosen === "past"?"active":"past"} onClick={() => setChosen("past")}>Past</div>
         </div>
-        {chosen == "all"?
+        {chosen === "all"?
        <div className='upcomming'>
         {
-        pastData.map(anime=>(
+        allData.map(anime=>(
         <>
         <Upcoming key={anime.id} anime={anime}/>
         </>
         ))
         }
         </div> :
-        chosen == "up" ?
+        chosen === "up" ?
         <div className='upcomming'>
         {
         upcomingdata.map(anime=>(
