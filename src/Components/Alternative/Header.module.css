@@ -50,6 +50,11 @@
     font-weight: 500;
     cursor: pointer;
 }
+.mainHeaderItem a Button span
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
 .mainHeaderItem a
 {
     text-decoration: none;

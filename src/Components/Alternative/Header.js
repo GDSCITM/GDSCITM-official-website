@@ -22,7 +22,7 @@ export default function HeaderTwo() {
           <p>Event</p>
           <p>Team</p>
           <a href=" https://gdsc.community.dev/institute-of-technology-and-management-gwalior/"><Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
-            Join Us
+            <span>Join Us</span>
           </Button></a>
         </div>
      
