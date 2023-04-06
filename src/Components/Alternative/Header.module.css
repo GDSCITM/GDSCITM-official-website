@@ -53,7 +53,8 @@
 .mainHeaderItem a Button span
 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-size: 16px;
+    font-weight: 500;
 }
 .mainHeaderItem a
 {
