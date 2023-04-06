@@ -81,6 +81,7 @@
   margin-right: 9%;
   flex-wrap: wrap;
   gap: 80px;
+  justify-content: space-between;
 }
 
 /* ##############################  upcoming */
@@ -139,6 +140,7 @@
   height: 150px;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 5%;
   font-size: 12px;
 }
 .know-ele {
