@@ -75,6 +75,7 @@
 }
 .upcomming {
   /* height: 800px; */
+  height: auto;
   display: flex;
   margin-left: 11%;
   margin-right: 9%;
