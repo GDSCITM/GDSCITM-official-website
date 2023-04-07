@@ -36,7 +36,8 @@
     height: auto;
     display: flex;
     gap: 10px;
-    justify-content: center;
+    margin-right: 20px;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -53,8 +54,10 @@
 .mainHeaderItem a Button span
 {
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 16px;
     font-weight: 500;
+
 }
 .mainHeaderItem a
 {
@@ -160,7 +163,8 @@
         height: auto;
         display: flex;
         gap: 10px;
-        justify-content: center;
+        margin-right: 20px;
+        justify-content: flex-end;
         align-items: center;
     }
 
@@ -199,6 +203,11 @@
 @media only screen and (min-width: 992px) {
     .mainHeaderMobileItem {
         display: none;
+    }
+    .mainHeaderItem a Button span
+    {
+        font-size: 16px;
+        font-weight: 500;
     }
 
 }

@@ -8,11 +8,13 @@ import Footer from "./Pages/Footer/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import About from "./Components/Alternative/about/about";
+import Gallery from "./Components/Alternative/gallery/gallery";
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Home />
       <About/>
+      <Gallery/>
       <Event />
       <Teams />
       <Footer />
