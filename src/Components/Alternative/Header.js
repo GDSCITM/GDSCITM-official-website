@@ -57,6 +57,7 @@ export default function HeaderTwo() {
       <div
         style={{ position: "relative", width: "100%", height: "80px" }}
       ></div>
+      
       <div className={styles.mainHeaderMobile} style={{display:`${menu === true ? "block" : "none"}`}}>
         <div className={styles.mainHeaderMobileClose} onClick={() => {setMenu(!menu)}}></div>
         <div className={styles.mainHeaderMobileHolder} >
