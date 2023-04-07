@@ -61,15 +61,7 @@ export default function HeaderTwo() {
       <div className={styles.mainHeaderMobile} style={{display:`${menu === true ? "block" : "none"}`}}>
         <div className={styles.mainHeaderMobileClose} onClick={() => {setMenu(!menu)}}></div>
         <div className={styles.mainHeaderMobileHolder} >
-          <div className={styles.mainHeaderMobileHolderItem} >
-            <div className={styles.mainHeaderMobileHolderItemImage} >
-              <img src="images/gallery/2.jpeg" alt="anshit" />
-            </div>
-            <div className={styles.mainHeaderMobileHolderItemDetails} >
-              <p>anshit mishra</p>
-              <span>anshitmishra03@gmail.com</span>
-            </div>
-          </div>
+          
           <div className={styles.mainHeaderMobileHolderItemTwo} >
             <p><HomeOutlinedIcon/> Home</p>
             <p><InfoOutlinedIcon/> About</p>
@@ -78,7 +70,7 @@ export default function HeaderTwo() {
             <p><FeedbackOutlinedIcon/> Feedback</p>
             <p><QuizOutlinedIcon/> FAQ's</p>
             <p><b>{"<>"}</b>Join club</p>
-            <p><LogoutOutlinedIcon/> Logout</p>
+            
           </div>
         </div>
       </div>
