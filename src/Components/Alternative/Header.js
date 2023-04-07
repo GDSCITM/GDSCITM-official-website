@@ -4,13 +4,22 @@ import { Button } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
+import QuizOutlinedIcon from '@mui/icons-material/QuizOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { useState } from "react";
+
 
 
 export default function HeaderTwo() {
   var theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("768"));
-
-  return (
+  const [menu,setMenu] = useState(false)
+  return ( 
     <>
       <div className={styles.main}>
         <div className={styles.mainHeaderLogo}>
@@ -31,7 +40,7 @@ export default function HeaderTwo() {
           )}
         </div>
         <div className={styles.mainHeaderMobileItem}>
-          <p>
+          <p onClick={() => {setMenu(!menu)}}>
             <MenuIcon />
           </p>
         </div>
@@ -48,6 +57,30 @@ export default function HeaderTwo() {
       <div
         style={{ position: "relative", width: "100%", height: "80px" }}
       ></div>
+      <div className={styles.mainHeaderMobile} style={{display:`${menu === true ? "block" : "none"}`}}>
+        <div className={styles.mainHeaderMobileClose} onClick={() => {setMenu(!menu)}}></div>
+        <div className={styles.mainHeaderMobileHolder} >
+          <div className={styles.mainHeaderMobileHolderItem} >
+            <div className={styles.mainHeaderMobileHolderItemImage} >
+              <img src="images/gallery/2.jpeg" alt="anshit" />
+            </div>
+            <div className={styles.mainHeaderMobileHolderItemDetails} >
+              <p>anshit mishra</p>
+              <span>anshitmishra03@gmail.com</span>
+            </div>
+          </div>
+          <div className={styles.mainHeaderMobileHolderItemTwo} >
+            <p><HomeOutlinedIcon/> Home</p>
+            <p><InfoOutlinedIcon/> About</p>
+            <p><CalendarMonthOutlinedIcon/> Event</p>
+            <p><GroupsOutlinedIcon/> Team</p>
+            <p><FeedbackOutlinedIcon/> Feedback</p>
+            <p><QuizOutlinedIcon/> FAQ's</p>
+            <p><b>{"<>"}</b>Join club</p>
+            <p><LogoutOutlinedIcon/> Logout</p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
