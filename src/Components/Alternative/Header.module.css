@@ -327,5 +327,7 @@
     .mainHeaderMobileItem {
         display: none;
     }
-
+    .mainHeaderMobile {
+        display: none;
+    }
 }
