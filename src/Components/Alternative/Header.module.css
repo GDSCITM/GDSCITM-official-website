@@ -319,7 +319,9 @@
         font-size: 16px;
         font-weight: 500;
     }
-
+    .mainHeaderMobile {
+        display: none;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
