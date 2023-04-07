@@ -34,7 +34,22 @@ function Event() {
             , topImage: "/images/bg1.png", color: "#ffd34e"
         }
     ])
-    const pastData = [];
+    const[pastData,setPastData]=useState([
+{id:"1",date:"01",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+,topImage:"/images/bg1.png",color:"#ffd34e"},
+{id:"2",date:"02",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+,topImage:"/images/bg2.png",color:"#f27770"}
+,{id:"3",date:"03",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+,topImage:"/images/bg3.png",color:"#3eaff4"},
+{id:"4",date:"04",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+,topImage:"/images/bg4.png",color:"#6ebb71"},
+{id:"5",date:"06",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+,topImage:"/images/bg2.png",color:"#f47169"},
+{id:"6",date:"06",month:"sep 22",topic:"Orientation Session",text:"We are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students ClubsWe are having a live session where we will introduce you to Google Developer Students Clubs"
+,topImage:"/images/bg1.png",color:"#ffd34e"}
+])
+
+
     // const allEvents = upcomingdata.concat(pastData) 
     const allEvents = [...pastData, ...upcomingdata];
     /* allEvents is an array which consists of both upcoming and past events */
