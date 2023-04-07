@@ -161,6 +161,10 @@
         height: 50%;
     }
 
+    .mainHolderOneItem {
+        align-items: center;
+    }
+
     .mainHolderOneItem p {
         font-size: 15px;
     }
@@ -168,17 +172,21 @@
     .mainHolderOneItem h1 {
         line-height: 50px;
         font-size: 40px;
+        text-align: center;
     }
 
     .mainHolderOneItemInput {
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: center;
+        width: 70%;
+        margin-top: 20px;
     }
 
     .mainHolderOneItemInput button {
-        width: auto;
+        width: 100%;
         font-size: 15px;
         padding: 10px 15px;
+        margin-top: 10px;
     }
 
     .mainHolderTwo {
@@ -220,6 +228,10 @@
         height: 50%;
     }
 
+    .mainHolderOneItem {
+        align-items: center;
+    }
+
     .mainHolderOneItem p {
         font-size: 15px;
     }
@@ -227,17 +239,21 @@
     .mainHolderOneItem h1 {
         line-height: 50px;
         font-size: 40px;
+        text-align: center;
     }
 
     .mainHolderOneItemInput {
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: center;
+        width: 70%;
+        margin-top: 20px;
     }
 
     .mainHolderOneItemInput button {
-        width: auto;
+        width: 100%;
         font-size: 15px;
         padding: 10px 15px;
+        margin-top: 10px;
     }
 
     .mainHolderTwo {
