@@ -10,11 +10,11 @@ export default function Gallery() {
       const response = await fetch('https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Gallery/data.json');
       const data = await response.json();
       setFetchedImages(data);
+      console.log(data)
     } catch (error) {
       console.error('Failed to fetch images:', error);
     }
   };
-
   useEffect(() => {
     fetchImages();
   }, []);
@@ -34,7 +34,8 @@ export default function Gallery() {
             </div>
             <div className={styles.mainHolderOneItemContainer}>
               {fetchedImages.map((image, index) => (
-                <img key={index} src={image.src} alt={image.alt} />
+                <img key={index} src={image.image} alt={image.alt} />
+                 
               ))}
             </div>
           </div>
@@ -53,9 +54,8 @@ export default function Gallery() {
                 The club is intended as a space for students to try out new ideas and collaborate to solve.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+            </div>
+            </div>
+            </div>
+            </div>)
 }
