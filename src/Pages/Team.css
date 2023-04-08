@@ -1,3 +1,9 @@
+@media (min-width: 700px) {
+   .box{
+    min-width: 200px;
+   }
+}
+
 @media (max-width: 480px) {
     
     .arrow2-icon{
