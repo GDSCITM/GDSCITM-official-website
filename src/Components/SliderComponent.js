@@ -13,6 +13,7 @@ import { IconButton, Grid, Divider, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import "../Pages/Team.css"
 export default function SliderComponent() {
   var rs = useRef();
   var reviews = [
@@ -122,19 +123,19 @@ export default function SliderComponent() {
           padding: "30px 0px 30px 0px",
            pointerEvents: "auto",
         }}
-      >
+      className="box-parent">
         <Box
           sx={{
-            minWidth: 203,
+            // minWidth: 150,
             width: "fit-content",
-            minHeight: 267.39,
+            minHeight: 200.39,
             borderRadius: 4,
             filter:
               "drop-shadow(-4.40684px 4.40684px 16.5257px rgba(0, 0, 0, 0.1)) drop-shadow(2.20342px -2.20342px 16.5257px rgba(0, 0, 0, 0.1))",
             background: "white",
         
           }}
-        >
+        className="box">
           <Box
             style={{
               height: 140,
@@ -147,8 +148,8 @@ export default function SliderComponent() {
               borderTopRightRadius: 16,
          
             }}
-          >
-            <img style={{ padding: "1rem" }} src={item.image} />
+          className="box2">
+            <img style={{ padding: "1rem" }} src={item.image}  alt=""/>
           </Box>
           <Box style={{ height: 107.39, paddingBottom: "20px",   }}>
             <Typography
@@ -214,14 +215,14 @@ export default function SliderComponent() {
           flexDirection: "row",
           position: "relative",
         }}
-      >
-        <Grid style={{ position: "absolute", top: 0, left: 100 }}>
+      className="parent">
+        <Grid style={{ position: "absolute", top: 0, left: 100 }} className="arrow">
           <IconButton
             onClick={handlePrev}
             variant="contained"
             style={{ cursor: "pointer" }}
-          >
-            <img src="/images/leftarrow.png" />
+            className="arrow1-icon">
+            <img src="/images/leftarrow.png" alt=""/>
           </IconButton>
         </Grid>
         <Grid
@@ -232,10 +233,10 @@ export default function SliderComponent() {
             fontSize: 30,
           }}
         >
-          <Grid style={{ display: "flex", justifyContent: "center" }}>
+          <Grid style={{ display: "flex", justifyContent: "center" }} className="leader">
             Leadership Team
           </Grid>
-          <Divider color="#333333" marginTop={10} />
+          <Divider color="#333333" marginTop={10} className="divider"/>
           <Grid
             style={{
               color: "#666666",
@@ -245,13 +246,13 @@ export default function SliderComponent() {
               fontWeight: 400,
               marginTop: 10,
             }}
-          >
+          className="vision">
             vision and courage to create
           </Grid>
         </Grid>
-        <Grid style={{ position: "absolute", top: 0, right: 100 }}>
-          <IconButton onClick={handleNext} variant="contained">
-            <img src="/images/rightarrow.png" />
+        <Grid style={{ position: "absolute", top: 0, right: 100 }} className="arrow2">
+          <IconButton onClick={handleNext} variant="contained" className="arrow2-icon">
+            <img src="/images/rightarrow.png" alt=""/>
           </IconButton>
         </Grid>
       </Grid>
