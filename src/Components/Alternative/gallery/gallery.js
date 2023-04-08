@@ -9,7 +9,7 @@ export default function Gallery() {
     try {
       const response = await fetch('https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Gallery/data.json');
       const data = await response.json();
-      setFetchedImages(data.images);
+      setFetchedImages(data);
     } catch (error) {
       console.error('Failed to fetch images:', error);
     }
