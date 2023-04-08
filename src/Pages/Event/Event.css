@@ -124,7 +124,7 @@
   font-size: 15px;
   color: white;
 
-  margin-top: 0px;
+  margin-top: 5px;
   top: -10px;
   position: relative;
 }
@@ -239,8 +239,6 @@
   width: 70%;
   max-width: 400px;
   margin: 0px auto;
-}
-.cardLeft {
 }
 .cardLeft__info {
   height: 100%;
