@@ -7,7 +7,7 @@ export default function Gallery() {
   // Fetch images asynchronously
   const fetchImages = async () => {
     try {
-      const response = await fetch('https://github.com/GDSCITM/GDSC-dataStore/blob/main/Gallery/data.json');
+      const response = await fetch('https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Gallery/data.json');
       const data = await response.json();
       setFetchedImages(data.images);
     } catch (error) {
