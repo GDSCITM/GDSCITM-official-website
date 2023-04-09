@@ -79,7 +79,7 @@ export default function SliderComponent() {
     },
   ];
 
-  const[isMobile1,setIsMobile]=useState(true);
+  const[isMobile1,setIsMobile]=useState(false);
 
   useEffect(() => {
     const handleResize = () => {
