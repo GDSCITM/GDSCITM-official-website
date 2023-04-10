@@ -19,6 +19,12 @@
     width: 350px;
     height: 250px;
 }
+.grid_container__box4{
+    display: none;
+ }
+ .grid_container__box1>div{
+     width: 350px;
+ }
 /* ==== Footer Left Section ==== */
 /* === Logo Container === */
 .grid_container__box1__logo_container{
@@ -49,8 +55,11 @@
     color: #fff !important;
 }
 .grid_container__box1__text_container__email>div{
-    margin-top: 10px;
+    margin-top: 4px;
     margin-left: -7px;
+}
+.grid_container__box1__text_container__social{
+    display: none
 }
 .socialIcon{
     font-size: 22px !important;
@@ -178,6 +187,24 @@
       margin-left: 0px !important;
     }
 
+    .grid_container__box1__text_container__email>div{
+        visibility: hidden;
+    }
+
+    .grid_container__box4{
+        display: block
+    }
+    .grid_container__box4 > div{
+        display: flex;
+        justify-content: center;
+     }
+     .grid_container__box4 > div > svg{
+        margin-right: 40px;
+    }
+    .grid_container__box4 > div > box-icon{
+        margin-right: 40px;
+    }
+
     /* === Commonn Boder to Box1(left) and Box3(right) === */
    .grid_container__box1,.grid_container__box3{
       border: none;
@@ -186,11 +213,14 @@
    .grid_container__box1__text_container__email>.socialIcon{
       margin-top: 20px;
     }
+    .grid_container__box1__text_container__social{
+        display: flex
+    }
     .socialIcon{
-      padding-right: 20px !important;
+      /* padding-right: 20px !important; */
     }
     .socialIcon:nth-child(5){
-      padding-left: 20px !important;
+      /* padding-left: 20px !important; */
     }
     /* === Copy Right === */
     .gdsc__copyright{
