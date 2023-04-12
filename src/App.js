@@ -9,6 +9,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 import About from "./Components/Alternative/about/about";
 import Gallery from "./Components/Alternative/gallery/gallery";
+import Contributers from "./Components/Alternative/contributors/contributors";
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -17,6 +18,7 @@ function App() {
       <Gallery/>
       <Event />
       <Teams />
+      <Contributers/>
       <Footer />
     </ThemeProvider>
   );
