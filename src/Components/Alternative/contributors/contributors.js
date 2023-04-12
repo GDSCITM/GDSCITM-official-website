@@ -20,15 +20,18 @@ export default function Contributers() {
                 <p></p>
             </div>
             <div className={styles.mainHolder} >
-                {data.length > 0 && data.map((val, index) => {
-                    return (<>
-                        {val?.avatar_url ? <a href={val?.html_url} target="_blank" rel="noreferrer"><div title={val?.login} key={index} className={styles.mainHolderItem}>
-                            <img src={val?.avatar_url} alt={val?.login} />
-                        </div></a> : ""}
-                    </>
+                    {data.length > 0 && data.map((val, index) => {
+                        return (<>
+                            {val?.avatar_url ? <a href={val?.html_url} target="_blank" rel="noreferrer"><div title={val?.login} key={index} className={styles.mainHolderItem}>
+                                <img src={val?.avatar_url} alt={val?.login} />
+                                <p>{val?.login}</p>
+                            </div></a> : ""}
+                        </>
 
-                    )
-                })}
+                        )
+                    })}
+                 
+
             </div>
         </div>
     )

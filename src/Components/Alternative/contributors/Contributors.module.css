@@ -55,6 +55,14 @@
     position: relative;
     width: auto;
     height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
 }
 
 .mainHolderItem img {
@@ -64,6 +72,32 @@
     border-radius: 50%;
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.mainHolderItem p {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    display: none;
+    word-break: keep-all;
+}
+
+.mainHolderItem:hover {
+    transform: scale(1.2);
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.mainHolderItem:hover p {
+    display: block;
 }
 
 
