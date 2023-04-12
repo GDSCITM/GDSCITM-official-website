@@ -199,7 +199,7 @@
         justify-content: center;
      }
      .grid_container__box4 > div > svg{
-        margin-right: 40px;
+        margin: 0px 20px;
     }
     .grid_container__box4 > div > box-icon{
         margin-right: 40px;
