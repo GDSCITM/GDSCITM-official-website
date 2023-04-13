@@ -55,7 +55,7 @@ export default function HeaderTwo() {
         </div>
       </div>
       <div
-        style={{ position: "relative", width: "100%", height: "80px" }}
+        style={{ position: "relative", width: "100%", height: "70px" }}
       ></div>
       
       <div className={styles.mainHeaderMobile} style={{display:`${menu === true ? "block" : "none"}`}}>
