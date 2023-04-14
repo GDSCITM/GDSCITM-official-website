@@ -13,6 +13,7 @@ import { IconButton, Grid, Divider, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import "./slider.css";
 export default function SliderComponent() {
   var rs = useRef();
   var reviews = [
@@ -170,6 +171,7 @@ export default function SliderComponent() {
           padding: "30px 0px 30px 0px",
           pointerEvents: "auto",
         }}
+        
       >
         <Box
           sx={{
@@ -182,6 +184,7 @@ export default function SliderComponent() {
             background: "white",
 
           }}
+          className="person_div"
         >
           <Box
             style={{

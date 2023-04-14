@@ -19,7 +19,7 @@
 
 .mainHolderOne {
     position: relative;
-    width: 50%;
+    width:70%;
     height: auto;
     padding: 10px;
     display: flex;
@@ -39,8 +39,8 @@
     position: relative;
     width: auto;
     height: auto;
-    font-size: 20px;
-    font-weight: 450;
+    font-size: 17px;
+    font-weight: 400;
     color: #777;
 }
 
@@ -53,7 +53,7 @@
 
 .mainHolderTwo {
     position: relative;
-    width: 50%;
+    width: 30%;
     height: auto;
     padding: 10px;
     display: flex;
@@ -204,7 +204,7 @@
 
     .mainHolderOne {
         position: relative;
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -224,8 +224,8 @@
         position: relative;
         width: auto;
         height: auto;
-        font-size: 20px;
-        font-weight: 450;
+        font-size: 17px;
+        font-weight: 400;
         color: #777;
     }
 
@@ -238,7 +238,7 @@
 
     .mainHolderTwo {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -276,7 +276,7 @@
 
     .mainHolderOne {
         position: relative;
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -296,7 +296,7 @@
         position: relative;
         width: auto;
         height: auto;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 450;
         color: #777;
     }
@@ -310,7 +310,7 @@
 
     .mainHolderTwo {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -347,7 +347,7 @@
 
     .mainHolderOne {
         position: relative;
-        width: 50%;
+        width: 70%;
         height: auto;
         padding: 10px;
         display: flex;
@@ -367,8 +367,8 @@
         position: relative;
         width: auto;
         height: auto;
-        font-size: 20px;
-        font-weight: 450;
+        font-size: 17px;
+        font-weight: 400;
         color: #777;
     }
 
@@ -381,7 +381,7 @@
 
     .mainHolderTwo {
         position: relative;
-        width: 50%;
+        width: 30%;
         height: auto;
         padding: 10px;
         display: flex;
