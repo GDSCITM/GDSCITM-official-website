@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -21,59 +21,107 @@ export default function SliderComponent() {
       id: 1,
       name: "Akshat Jain",
       role: "Technical Support",
-      image: "/images/1.png",
+      avatar: "/images/1.png",
       bg: "/images/bg1.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 2,
       name: "Rohit Sharma",
       role: "UI/UX Designer",
-      image: "/images/2.png",
+      avatar: "/images/2.png",
       bg: "/images/bg2.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 3,
       name: "Harry Singh",
       role: "System engineer",
-      image: "/images/3.png",
+      avatar: "/images/3.png",
       bg: "/images/bg3.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 4,
       name: "Akshara Jain",
       role: "Web Development",
-      image: "/images/4.png",
+      avatar: "/images/4.png",
       bg: "/images/bg4.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 5,
       name: "Ronit Roy",
       role: "Web Development",
-      image: "/images/1.png",
+      avatar: "/images/1.png",
       bg: "/images/bg4.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 6,
       name: "Vayu Gandhi",
       role: "System engineer",
-      image: "/images/2.png",
+      avatar: "/images/2.png",
       bg: "/images/bg3.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 7,
       name: "Abhiraj",
       role: "UI/UX Designer",
-      image: "/images/3.png",
+      avatar: "/images/3.png",
       bg: "/images/bg2.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
     {
       id: 8,
       name: "Ram Singh",
       role: "Technical Support",
-      image: "/images/4.png",
+      avatar: "/images/4.png",
       bg: "/images/bg1.png",
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/",
+      "twitter": "https://twitter.com/"
     },
   ];
+
+  const [teamdata, setteamdata] = useState([])
+
+  useEffect(() => {
+    let i = 1;
+    let rendomint = () => {
+      if (i === 4) {
+        i = 1
+      } else {
+        i = i + 1
+      }
+      return i
+    }
+    const fetchdata = async () => {
+      const response = await fetch("https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Teams/data.json")
+      const data = await response.json()
+      console.log(data)
+      setteamdata(data.map((item, idx) => ({ ...item, bg: `/images/bg${rendomint()}.png` })))
+    }
+
+    fetchdata()
+
+  }, [])
+
 
   var settings = {
     dots: true,
@@ -93,8 +141,8 @@ export default function SliderComponent() {
           left: "50%",
           transform: "translatex(-50%)",
           zIndex: -1,
-          
-          
+
+
         }}
       >
         <ul style={{ margin: "0px", padding: 0 }}> {dots} </ul>
@@ -109,8 +157,8 @@ export default function SliderComponent() {
     rs.current.slickPrev();
   };
 
-  const showComponent = () =>
-    reviews.map((item, index) => (
+  const showComponent = (data) =>
+    data.map((item, index) => (
       <Grid
         item
         lg={3}
@@ -121,7 +169,7 @@ export default function SliderComponent() {
           display: "flex",
           justifyContent: "center",
           padding: "30px 0px 30px 0px",
-           pointerEvents: "auto",
+          pointerEvents: "auto",
         }}
         
       >
@@ -134,6 +182,7 @@ export default function SliderComponent() {
             filter:
               "drop-shadow(-4.40684px 4.40684px 16.5257px rgba(0, 0, 0, 0.1)) drop-shadow(2.20342px -2.20342px 16.5257px rgba(0, 0, 0, 0.1))",
             background: "white",
+
           }}
           className="person_div"
         >
@@ -147,12 +196,12 @@ export default function SliderComponent() {
               backgroundPosition: "center",
               borderTopLeftRadius: 16,
               borderTopRightRadius: 16,
-         
+              alignItems: "center"
             }}
           >
-            <img style={{ padding: "1rem" }} src={item.image} />
+            <img style={{ height: "6.75rem", width: "6.75rem", borderRadius: "50%", border: "4px solid white" }} src={item.avatar} />
           </Box>
-          <Box style={{ height: 107.39, paddingBottom: "20px",   }}>
+          <Box style={{ height: 107.39, paddingBottom: "20px", }}>
             <Typography
               gutterBottom
               style={{
@@ -181,7 +230,7 @@ export default function SliderComponent() {
             >
               {item.role}
             </Typography>
-        
+
             <Typography
               variant="body2"
               style={{
@@ -190,13 +239,13 @@ export default function SliderComponent() {
                 gap: "10px",
                 marginTop: "9px",
                 marginBottom: "10px",
-                
+
               }}
               color="#959595"
             >
-              <LinkedInIcon fontSize="large" style={{ cursor: "pointer " }} />
-              <TwitterIcon fontSize="large" style={{ cursor: "pointer " }} />
-              <GitHubIcon fontSize="large"  style={{ cursor: "pointer " }} />
+              {item.linkedin ? <a href={item.linkedin} target="_blank"><LinkedInIcon fontSize="large" style={{ cursor: "pointer " , color : "rgb(149, 149, 149)" }} /></a> : null}
+              {item.twitter ? <a href={item.twitter} target="_blank"><TwitterIcon fontSize="large" style={{ cursor: "pointer " , color : "rgb(149, 149, 149)" }} /></a> : null}
+              {item.github ? <a href={item.github} target="_blank"><GitHubIcon fontSize="large" style={{ cursor: "pointer " , color : "rgb(149, 149, 149)" }} /></a> : null}
             </Typography>
           </Box>
         </Box>
@@ -259,11 +308,11 @@ export default function SliderComponent() {
       </Grid>
       <div style={{ marginTop: "60px", position: "relative" }}>
         <Slider {...settings} ref={rs} >
-          <Grid container sx={{ display: "flex !important" ,  }}>
-            {showComponent()}
+          <Grid container sx={{ display: "flex !important", }}>
+            {showComponent(teamdata)}
           </Grid>
-          <Grid container sx={{ display: "flex !important" , }}>
-            {showComponent()}
+          <Grid container sx={{ display: "flex !important", }}>
+            {showComponent(reviews)}
           </Grid>
         </Slider>
       </div>
