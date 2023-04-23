@@ -40,9 +40,11 @@
   }
   
   .card{
-   
     border-radius: 20px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+    /* box-shadow: -4.20342px 4.20342px 16.5257px rgba(0, 0, 0, 0.1); */
+    
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+
     margin-bottom: 10px;
   }
   
