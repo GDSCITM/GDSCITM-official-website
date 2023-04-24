@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -15,7 +15,6 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import "../Pages/Teamss/Team.css"
 import MobileTeams from "../Pages/Teamss/MobileTeams";
-import { useEffect } from "react";
 export default function SliderComponent() {
   
   var rs = useRef();
