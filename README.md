@@ -109,7 +109,7 @@ _Steps to set up project on your local machine ._
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/GDSC-website.git
+   git clone https://github.com/GDSCITM/GDSCITM-official-website.git
    ```
 2. Install NPM packages
    ```sh
