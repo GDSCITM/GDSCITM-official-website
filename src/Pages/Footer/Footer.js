@@ -63,7 +63,7 @@ export default function Footer() {
                         
                     </div>
                     <div class="grid_container__box1__text_container__email" >
-                        <Typography variant="body2">gdsc@itm.ac.in</Typography>
+                    <ThemeProvider theme={theme}><Typography variant="body2">gdsc@itm.ac.in</Typography></ThemeProvider>
                         {/* === Social Icons === */}
                         <div>
                             <InstagramIcon className="socialIcon"/>
@@ -79,7 +79,7 @@ export default function Footer() {
             {/* ==== Middle Box ==== */}
             <Grid item lg={4} xs={12}>
                 <div className="grid_container__box2">
-                    <div className="grid_container__box2__middle"><Typography variant="h6">Join</Typography></div>
+                    <ThemeProvider theme={theme}><div className="grid_container__box2__middle"><Typography variant="h6">Join</Typography></div></ThemeProvider>
                     <div className="grid_container__box2__line1"></div>
                     <div className="grid_container__box2__line2"></div>
                     <div className="grid_container__box2__line3"></div>
@@ -88,6 +88,7 @@ export default function Footer() {
             </Grid>
             <Grid item lg={4} xs={12}>
                 <div className="grid_container__box3">
+                    <ThemeProvider theme={theme}>
                     <div>
                         <Typography variant="subtitle1">Quick Links</Typography>
                         <div className='grid_subcontainer__box3'>
@@ -105,10 +106,10 @@ export default function Footer() {
                         <Typography variant="body2">Accelerators</Typography>
                         <Typography variant="body2">Google Developer Student Clubs</Typography>
                     </div>
-                
+                    </ThemeProvider>
                 </div>
             </Grid>
-            <div className="gdsc__copyright"><Typography variant="body2">&copy; 2023 GDSC ITM</Typography></div>
+            <ThemeProvider theme={theme}><div className="gdsc__copyright"><Typography variant="body2">&copy; 2023 GDSC ITM</Typography></div></ThemeProvider>
         </Grid>
         
     </div>
