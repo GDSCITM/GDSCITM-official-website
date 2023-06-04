@@ -1,4 +1,4 @@
-Thanks for the contribution! **Below** is a template that can make it easier to review your changes:
+<!-- Thank you for contributing to GDSCITM! This is a template that makes it easier to review your changes: -->
 
 **Description**:
 
