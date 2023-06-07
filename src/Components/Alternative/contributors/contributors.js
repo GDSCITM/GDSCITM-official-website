@@ -6,7 +6,6 @@ export default function Contributers() {
     const FetchData = async () => {
         let fetchList = await fetch("https://api.github.com/repos/GDSCITM/GDSCITM-official-website/contributors?anon=1")
         let data = await fetchList.json()
-        console.log(data, "asdasdas");
         setData(data)
     }
     useEffect(() => {
