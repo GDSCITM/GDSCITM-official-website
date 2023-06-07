@@ -1,0 +1,171 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 10px auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHeading {
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding: 5px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainHeading h2 {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.mainHeading p {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+.mainHolder {
+    position: relative;
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHolderItem {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+}
+
+.mainHolderItem img {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.mainHolderItem p {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    display: none;
+    word-break: keep-all;
+}
+
+.mainHolderItem:hover {
+    transform: scale(1.2);
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.mainHolderItem:hover p {
+    display: block;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mainHeading {
+        width: 100%;
+    }
+
+    .mainHeading h2 {
+        font-size: 25px;
+    }
+
+    .main {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .mainHolder {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .mainHeading {
+        width: 100%;
+    }
+
+    .main {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .mainHolder {
+        width: 100%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .mainHeading {
+        width: 90%;
+    }
+
+    .mainHolder {
+        width: 90%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .mainHeading {
+        width: 80%;
+    }
+
+    .mainHolder {
+        width: 80%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .mainHeading {
+        width: 80%;
+    }
+
+    .mainHolder {
+        width: 70%;
+    }
+}
