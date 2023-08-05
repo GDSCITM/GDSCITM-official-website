@@ -199,7 +199,7 @@ export default function SliderComponent() {
               alignItems: "center"
             }}
           >
-            <img style={{ height: "6.75rem", width: "6.75rem", borderRadius: "50%", border: "4px solid white", objectFit: cover }} src={item.avatar} />
+            <img style={{ height: "6.75rem", width: "6.75rem", borderRadius: "50%", border: "4px solid white", objectFit: "cover" }} src={item.avatar} />
           </Box>
           <Box style={{ height: 107.39, paddingBottom: "20px", }}>
             <Typography
