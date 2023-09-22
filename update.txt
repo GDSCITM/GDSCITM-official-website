@@ -1,0 +1,22 @@
+Issue: Incorrect University Name on Front Page
+
+**Description:**
+
+While exploring the GDSC ITM website, I noticed that on the front page, the name of another university is incorrectly displayed instead of our institute's name (Institute of Technology and Management).
+
+**Steps to Reproduce:**
+
+1. Visit the website at https://gdscitm.netlify.app/
+2. Scroll  to the front page.
+
+**Expected Behavior:**
+
+The front page right side image should prominently display  as the university name.
+
+**Actual Behavior:**
+
+The front page displays "Another University" instead of "GDSC ITM
+
+**Additional Information:**
+
+This issue affects the overall presentation of our club and should be corrected as soon as possible.
