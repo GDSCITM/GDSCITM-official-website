@@ -39,7 +39,7 @@ export default function Home(props) {
   return (
     <>
       <div style={{position:"relative",width:"100%"}}>
-        <HeaderTwo />
+        <HeaderTwo/>
         <HomeTwo/>
       </div>
     </>

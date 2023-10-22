@@ -88,9 +88,11 @@
 .card1 {
   margin-top: 0px;
   height: 330px;
+  
   flex: 1;
   width: 300px;
 }
+
 .card-ele {
   border-radius: 20px;
   width: 272px;
@@ -129,6 +131,7 @@
   position: relative;
 }
 .topic {
+  align-items: center;
   color: white;
   margin-left: 7%;
   font-size: 23px;

@@ -8,7 +8,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5);
+    /* background: rgba(255, 255, 255, 0.5);
+    
+    */
+    background:white;
+    
     overflow: visible;
     z-index: 100;
     backdrop-filter: blur(10px);
@@ -42,6 +46,16 @@
 }
 
 .mainHeaderItem p {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.mainHeaderItem a menuItem{
     position: relative;
     width: auto;
     height: auto;

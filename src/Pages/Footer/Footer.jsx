@@ -29,6 +29,14 @@ export default function Footer() {
             fontSize: '0.3rem',
         }
     };
+    theme.typography.links={
+        '@media(max-width: 600px':{
+            fontSize: '0.3rem',
+            color:'#ffffff'
+        }
+    };
+
+
   
     return(
     <div className="grid_container">

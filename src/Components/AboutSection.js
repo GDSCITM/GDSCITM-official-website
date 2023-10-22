@@ -102,7 +102,7 @@ const AboutSection = () => {
                 fontFamily: "Roboto, Helvetica, Arial, sans-serif",
               }}
             >
-              Know More
+              Know Moree
             </Button>
           </div>
         </Grid>

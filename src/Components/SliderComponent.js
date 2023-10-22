@@ -17,86 +17,86 @@ import "./slider.css";
 export default function SliderComponent() {
   var rs = useRef();
   var reviews = [
-    {
-      id: 1,
-      name: "Akshat Jain",
-      role: "Technical Support",
-      avatar: "/images/1.png",
-      bg: "/images/bg1.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 2,
-      name: "Rohit Sharma",
-      role: "UI/UX Designer",
-      avatar: "/images/2.png",
-      bg: "/images/bg2.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 3,
-      name: "Harry Singh",
-      role: "System engineer",
-      avatar: "/images/3.png",
-      bg: "/images/bg3.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 4,
-      name: "Akshara Jain",
-      role: "Web Development",
-      avatar: "/images/4.png",
-      bg: "/images/bg4.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 5,
-      name: "Ronit Roy",
-      role: "Web Development",
-      avatar: "/images/1.png",
-      bg: "/images/bg4.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 6,
-      name: "Vayu Gandhi",
-      role: "System engineer",
-      avatar: "/images/2.png",
-      bg: "/images/bg3.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 7,
-      name: "Abhiraj",
-      role: "UI/UX Designer",
-      avatar: "/images/3.png",
-      bg: "/images/bg2.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
-    {
-      id: 8,
-      name: "Ram Singh",
-      role: "Technical Support",
-      avatar: "/images/4.png",
-      bg: "/images/bg1.png",
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "twitter": "https://twitter.com/"
-    },
+    // {
+    //   id: 1,
+    //   name: "Akshat Jain",
+    //   role: "Technical Support",
+    //   avatar: "/images/1.png",
+    //   bg: "/images/bg1.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 2,
+    //   name: "Rohit Sharma",
+    //   role: "UI/UX Designer",
+    //   avatar: "/images/2.png",
+    //   bg: "/images/bg2.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 3,
+    //   name: "Harry Singh",
+    //   role: "System engineer",
+    //   avatar: "/images/3.png",
+    //   bg: "/images/bg3.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 4,
+    //   name: "Akshara Jain",
+    //   role: "Web Development",
+    //   avatar: "/images/4.png",
+    //   bg: "/images/bg4.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 5,
+    //   name: "Ronit Roy",
+    //   role: "Web Development",
+    //   avatar: "/images/1.png",
+    //   bg: "/images/bg4.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 6,
+    //   name: "Vayu Gandhi",
+    //   role: "System engineer",
+    //   avatar: "/images/2.png",
+    //   bg: "/images/bg3.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 7,
+    //   name: "Abhiraj",
+    //   role: "UI/UX Designer",
+    //   avatar: "/images/3.png",
+    //   bg: "/images/bg2.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 8,
+    //   name: "Ram Singh",
+    //   role: "Technical Support",
+    //   avatar: "/images/4.png",
+    //   bg: "/images/bg1.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
   ];
 
   const [teamdata, setteamdata] = useState([])
@@ -112,7 +112,7 @@ export default function SliderComponent() {
       return i
     }
     const fetchdata = async () => {
-      const response = await fetch("https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Teams/data.json")
+      const response = await fetch("https://raw.githubusercontent.com/yash9111/Datastore/master/images/coreTeam/data.json")
       const data = await response.json()
       console.log(data)
       setteamdata(data.map((item, idx) => ({ ...item, bg: `/images/bg${rendomint()}.png` })))
@@ -171,7 +171,7 @@ export default function SliderComponent() {
           padding: "30px 0px 30px 0px",
           pointerEvents: "auto",
         }}
-        
+
       >
         <Box
           sx={{
@@ -243,9 +243,9 @@ export default function SliderComponent() {
               }}
               color="#959595"
             >
-              {item.linkedin ? <a href={item.linkedin} target="_blank"><LinkedInIcon fontSize="large" style={{ cursor: "pointer " , color : "rgb(149, 149, 149)" }} /></a> : null}
-              {item.twitter ? <a href={item.twitter} target="_blank"><TwitterIcon fontSize="large" style={{ cursor: "pointer " , color : "rgb(149, 149, 149)" }} /></a> : null}
-              {item.github ? <a href={item.github} target="_blank"><GitHubIcon fontSize="large" style={{ cursor: "pointer " , color : "rgb(149, 149, 149)" }} /></a> : null}
+              {item.linkedin ? <a href={item.linkedin} target="_blank"><LinkedInIcon fontSize="large" style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }} /></a> : null}
+              {item.twitter ? <a href={item.twitter} target="_blank"><TwitterIcon fontSize="large" style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }} /></a> : null}
+              {item.github ? <a href={item.github} target="_blank"><GitHubIcon fontSize="large" style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }} /></a> : null}
             </Typography>
           </Box>
         </Box>
