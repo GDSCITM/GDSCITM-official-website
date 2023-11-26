@@ -112,7 +112,7 @@ export default function SliderComponent() {
       return i
     }
     const fetchdata = async () => {
-      const response = await fetch("https://raw.githubusercontent.com/yash9111/Datastore/master/images/coreTeam/data.json")
+      const response = await fetch("https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Teams/data.json")
       const data = await response.json()
       console.log(data)
       setteamdata(data.map((item, idx) => ({ ...item, bg: `/images/bg${rendomint()}.png` })))
