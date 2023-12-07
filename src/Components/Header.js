@@ -19,7 +19,7 @@ export default function Header(props) {
     <AppBar
       position="fixed"
       style={{
-        background: "#fff",
+        background: "#FFFFFF",
         width: "100vw",
         top: 0,
         boxShadow: "none",
@@ -37,7 +37,7 @@ export default function Header(props) {
             <div>Google Developer Student Club</div>
             <div
               style={{
-                color: "#959595",
+                color: "#FFFFFF",
                 fontSize: "14.74px",
                 fontFamily: "Roboto",
                 paddingTop: "3px",
@@ -58,14 +58,14 @@ export default function Header(props) {
             justifyContent: "flex-end",
           }}
         >
-          <Grid className={classes.link}>Home</Grid>
+          <Grid className={classes.link}>Homsse</Grid>
           <Grid className={classes.link}>About</Grid>
           <Grid className={classes.link}>Event</Grid>
           <Grid className={classes.link}>Teams</Grid>
 
           <Grid className={classes.link}>
-            <Button variant="contained" style={{ backgroundColor: "#2785FC" }}>
-              Join Us
+            <Button variant="contained" style={{ backgroundColor: "#2785FC " }}>
+              Join me
             </Button>
           </Grid>
         </Grid>

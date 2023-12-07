@@ -44,7 +44,7 @@ export default function Gallery() {
           <div className={styles.mainHolderTwoItem}>
             <div className={styles.mainHolderTwoItemHeading}>
               <h2>GDSC ITM</h2>
-              <p>Beginning of infinity</p>
+              <p>Beginning of infinity <b>∞</b></p>
             </div>
             <div className={styles.mainHolderTwoItemContainer}>
               <p>

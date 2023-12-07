@@ -22,7 +22,7 @@ function Upcoming({ anime }) {
       {isMobile ? (
         <MobileUpcoming data={anime} />
       ) : (
-        <div className="card1">
+        <div className="card1Mob">
           <div className="card-ele">
             <div>
               <div
