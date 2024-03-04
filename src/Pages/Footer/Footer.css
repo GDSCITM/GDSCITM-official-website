@@ -140,6 +140,11 @@
     bottom: 20px;
     left: 46%;
 }
+
+a{
+    font-size: 0.9rem;
+    color: #D4D4D4;
+}
 /* ==== Responsive ==== */
 @media screen and (max-width: 1000px) {
     /* === Left Most Box === */
