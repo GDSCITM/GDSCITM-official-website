@@ -17,9 +17,92 @@ import "./slider.css";
 
 export default function SliderComponent() {
   var rs = useRef();
+  var reviews = [
+    // {
+    //   id: 1,
+    //   name: "Akshat Jain",
+    //   role: "Technical Support",
+    //   avatar: "/images/1.png",
+    //   bg: "/images/bg1.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 2,
+    //   name: "Rohit Sharma",
+    //   role: "UI/UX Designer",
+    //   avatar: "/images/2.png",
+    //   bg: "/images/bg2.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 3,
+    //   name: "Harry Singh",
+    //   role: "System engineer",
+    //   avatar: "/images/3.png",
+    //   bg: "/images/bg3.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 4,
+    //   name: "Akshara Jain",
+    //   role: "Web Development",
+    //   avatar: "/images/4.png",
+    //   bg: "/images/bg4.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 5,
+    //   name: "Ronit Roy",
+    //   role: "Web Development",
+    //   avatar: "/images/1.png",
+    //   bg: "/images/bg4.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 6,
+    //   name: "Vayu Gandhi",
+    //   role: "System engineer",
+    //   avatar: "/images/2.png",
+    //   bg: "/images/bg3.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 7,
+    //   name: "Abhiraj",
+    //   role: "UI/UX Designer",
+    //   avatar: "/images/3.png",
+    //   bg: "/images/bg2.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+    // {
+    //   id: 8,
+    //   name: "Ram Singh",
+    //   role: "Technical Support",
+    //   avatar: "/images/4.png",
+    //   bg: "/images/bg1.png",
+    //   "github": "https://github.com/",
+    //   "linkedin": "https://www.linkedin.com/",
+    //   "twitter": "https://twitter.com/"
+    // },
+  ];
   var reviews = [];
 
-  const [teamdata, setteamdata] = useState([]);
+  const [teamdata, setteamdata] = useState([])
+  
 
   useEffect(() => {
     let i = 1;
