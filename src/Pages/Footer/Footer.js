@@ -1,15 +1,11 @@
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import { useState } from 'react';
+import { FaInstagram, FaYoutube, FaLinkedin, FaTwitter,FaDiscord } from 'react-icons/fa';
+import './Footer.css';
+import { Grid, Typography } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import 'boxicons'
-import "./Footer.css"
-import { colors } from '@mui/material';
 
 export default function Footer() {
     const theme = createTheme();
@@ -72,13 +68,13 @@ export default function Footer() {
                             <div class="grid_container__box1__text_container__email" >
                                 <ThemeProvider theme={theme}><Typography variant="body2">gdsc@itm.ac.in</Typography></ThemeProvider>
                                 {/* === Social Icons === */}
-                                <div>
-                                    <InstagramIcon className="socialIcon" />
-                                    <YouTubeIcon className="socialIcon" />
-                                    <LinkedInIcon className="socialIcon" />
-                                    <box-icon name='discord-alt' type='logo' color='#d4d4d4' className="socialIcon"></box-icon>
-                                    <TwitterIcon className="socialIcon" />
-                                </div>
+                                <div className="social-icons-container">
+    <FaInstagram className="socialIcon" style={{ color: '#D4D4D4' }} />
+    <FaYoutube className="socialIcon" style={{ color: '#D4D4D4' }} />
+    <FaLinkedin className="socialIcon" style={{ color: '#D4D4D4' }} />
+    <FaDiscord className="socialIcon" style={{ color: '#D4D4D4' }} />
+    <FaTwitter className="socialIcon" style={{ color: '#D4D4D4' }} />
+  </div>
                             </div>
                         </div>
                     </div>
@@ -99,10 +95,10 @@ export default function Footer() {
                             <div>
                                 <Typography variant="subtitle1">Quick Links</Typography>
                                 <div className='grid_subcontainer__box3'>
-                                    <a href="/#"><Typography variant="links" >Home</Typography></a>
-                                    <a href="/#about"><Typography variant="links">About</Typography></a>
-                                    <a href="/#event"><Typography variant="links">Events</Typography></a>
-                                    <a href="/#teams"><Typography variant="links">Teams</Typography></a>
+                                    <a href="/#">Home</a>
+                                    <a href="/#about">About</a>
+                                    <a href="/#event">Events</a>
+                                    <a href="/#teams">Teams</a>
 
                                 </div>
                             </div>
