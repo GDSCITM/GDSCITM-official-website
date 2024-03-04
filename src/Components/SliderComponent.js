@@ -2,18 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+// import Card from "@mui/material/Card";
+// import CardActions from "@mui/material/CardActions";
+// import CardContent from "@mui/material/CardContent";
+// import CardMedia from "@mui/material/CardMedia";
+// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Typography from "@mui/material/Typography";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { IconButton, Grid, Divider, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import "./slider.css";
+
 export default function SliderComponent() {
   var rs = useRef();
   var reviews = [
@@ -98,8 +99,10 @@ export default function SliderComponent() {
     //   "twitter": "https://twitter.com/"
     // },
   ];
+  var reviews = [];
 
   const [teamdata, setteamdata] = useState([])
+  
 
   useEffect(() => {
     let i = 1;
@@ -111,17 +114,15 @@ export default function SliderComponent() {
       }
       return i
     }
+
     const fetchdata = async () => {
       const response = await fetch("https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Teams/data.json")
       const data = await response.json()
-      console.log(data)
       setteamdata(data.map((item, idx) => ({ ...item, bg: `/images/bg${rendomint()}.png` })))
     }
 
-    fetchdata()
-
-  }, [])
-
+    fetchdata();
+  }, []);
 
   var settings = {
     dots: true,
@@ -141,8 +142,6 @@ export default function SliderComponent() {
           left: "50%",
           transform: "translatex(-50%)",
           zIndex: -1,
-
-
         }}
       >
         <ul style={{ margin: "0px", padding: 0 }}> {dots} </ul>
@@ -153,6 +152,7 @@ export default function SliderComponent() {
   const handleNext = () => {
     rs.current.slickNext();
   };
+
   const handlePrev = () => {
     rs.current.slickPrev();
   };
@@ -161,17 +161,17 @@ export default function SliderComponent() {
     data.map((item, index) => (
       <Grid
         item
-        lg={3}
-        md={3}
+        xl={3}
+        lg={4}  
+        md={6}
         sm={6}
-        xs={6}
+        xs={12}
         sx={{
           display: "flex",
           justifyContent: "center",
           padding: "30px 0px 30px 0px",
           pointerEvents: "auto",
         }}
-
       >
         <Box
           sx={{
@@ -182,13 +182,13 @@ export default function SliderComponent() {
             filter:
               "drop-shadow(-4.40684px 4.40684px 16.5257px rgba(0, 0, 0, 0.1)) drop-shadow(2.20342px -2.20342px 16.5257px rgba(0, 0, 0, 0.1))",
             background: "white",
-
           }}
           className="person_div"
         >
           <Box
             style={{
-              height: 140,
+              height: 200,
+              width: 300,
               display: "flex",
               justifyContent: "center",
               background: `url(${item.bg}) no-repeat `,
@@ -201,7 +201,7 @@ export default function SliderComponent() {
           >
             <img style={{ height: "6.75rem", width: "6.75rem", borderRadius: "50%", border: "4px solid white" }} src={item.avatar} />
           </Box>
-          <Box style={{ height: 107.39, paddingBottom: "20px", }}>
+          <Box style={{ height: 107.39, paddingBottom: "20px" }}>
             <Typography
               gutterBottom
               style={{
@@ -230,7 +230,6 @@ export default function SliderComponent() {
             >
               {item.role}
             </Typography>
-
             <Typography
               variant="body2"
               style={{
@@ -239,7 +238,6 @@ export default function SliderComponent() {
                 gap: "10px",
                 marginTop: "9px",
                 marginBottom: "10px",
-
               }}
               color="#959595"
             >
@@ -267,13 +265,7 @@ export default function SliderComponent() {
         }}
       >
         <Grid style={{ position: "absolute", top: 0, left: 100 }}>
-          <IconButton
-            onClick={handlePrev}
-            variant="contained"
-            style={{ cursor: "pointer" }}
-          >
-            <img src="/images/leftarrow.png" />
-          </IconButton>
+          
         </Grid>
         <Grid
           style={{
@@ -283,27 +275,39 @@ export default function SliderComponent() {
             fontSize: 30,
           }}
         >
-          <Grid style={{ display: "flex", justifyContent: "center" }}>
-            Leadership Team
-          </Grid>
-          <Divider color="#333333" marginTop={10} />
+          <Grid style={{ display: "flex", justifyContent: "center", gap:"1rem",fontSize:"3rem" }}>
+          <IconButton
+            onClick={handlePrev}
+            variant="contained"
+            style={{ cursor: "pointer" }}
+          >
+            <img src="/images/leftarrow.png" />
+          </IconButton>
+          <div>
+
+          Leadership Team
           <Grid
             style={{
               color: "#666666",
-              fontSize: 14,
+              fontSize: "1rem",
               display: "flex",
               justifyContent: "center",
-              fontWeight: 400,
-              marginTop: 10,
+              // fontWeight: 400,
+              margin: 10,
             }}
           >
             vision and courage to create
           </Grid>
-        </Grid>
-        <Grid style={{ position: "absolute", top: 0, right: 100 }}>
+          </div>
           <IconButton onClick={handleNext} variant="contained">
             <img src="/images/rightarrow.png" />
           </IconButton>
+          </Grid>
+          <Divider color="#333333" marginTop={10} />
+          
+        </Grid>
+        <Grid style={{ position: "absolute", top: 0, right: 100 }}>
+          
         </Grid>
       </Grid>
       <div style={{ marginTop: "60px", position: "relative" }}>

@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './gallery.module.css';
+
+
 
 export default function Gallery() {
   const [fetchedImages, setFetchedImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Fetch images asynchronously
   const fetchImages = async () => {
@@ -10,19 +15,35 @@ export default function Gallery() {
       const response = await fetch('https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Gallery/data.json');
       const data = await response.json();
       setFetchedImages(data);
-      console.log(data)
     } catch (error) {
       console.error('Failed to fetch images:', error);
     }
   };
+
   useEffect(() => {
     fetchImages();
-  }, []);
+
+    // Set up an interval to change the image every 3 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % fetchedImages.length);
+    }, 3000);
+
+    // Clean up the interval when the component unmounts or when fetchedImages changes
+    return () => clearInterval(intervalId);
+  }, [fetchedImages]);
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + fetchedImages.length) % fetchedImages.length);
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % fetchedImages.length);
+  };
 
   return (
     <div className={styles.main}>
       <div className={styles.mainHolderTwoItemDesign}>
-        <img src="images/assets/readmeImages/gallery.png" alt="dot green" />
+        
       </div>
       <div className={styles.mainHolder}>
         <div className={styles.mainHolderOne}>
@@ -33,10 +54,24 @@ export default function Gallery() {
               <p style={{ background: '#FBBC12' }}></p>
             </div>
             <div className={styles.mainHolderOneItemContainer}>
-              {fetchedImages.map((image, index) => (
-                <img key={index} src={image.image} alt={image.alt} />
-                 
-              ))}
+            <Carousel
+          selectedItem={currentImageIndex}
+          onChange={(index) => setCurrentImageIndex(index)}
+          showArrows={true}
+          showStatus={false}
+          showIndicators={false}
+          showThumbs={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          stopOnHover={true}
+        >
+          {fetchedImages.map((image, index) => (
+            <div key={index}>
+              <img src={image.image} alt={image.alt} />
+            </div>
+          ))}
+        </Carousel>
+              
             </div>
           </div>
         </div>
@@ -54,8 +89,9 @@ export default function Gallery() {
                 The club is intended as a space for students to try out new ideas and collaborate to solve.
               </p>
             </div>
-            </div>
-            </div>
-            </div>
-            </div>)
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

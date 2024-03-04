@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./about.module.css";
 import { Button } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import KeyBoardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyBoardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 export default function About() {
   const [showHiddenContent, setShowHiddenContent] = useState(false);
@@ -43,7 +45,7 @@ export default function About() {
           <Button
             size="medium"
             variant="contained"
-            startIcon={<OpenInNewIcon />}
+            // startIcon={<OpenInNewIcon />}
             sx={{
               width: "150px",
               marginTop: "20px",
@@ -51,7 +53,8 @@ export default function About() {
             }}
             onClick={toggleHiddenContent}
           >
-            {showHiddenContent ? "Hide Details" : "Know More"}
+            {showHiddenContent ? "Hide Details" : "Know More"} {showHiddenContent ? <KeyBoardArrowUpIcon /> : <KeyBoardArrowDownIcon />}
+
           </Button>
         </div>
 
