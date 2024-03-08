@@ -191,23 +191,31 @@
     justify-content: left;
     align-items: center;
     border-bottom: 1px solid #eee;
+
 }
-.mainHeaderMobileHolderItemTwo p{
+.mainHeaderMobileHolderItemTwo a{
     position: relative;
     width: 100%;
     height: auto;
-    padding: 10px 20px;
+    padding: 10px 10px;
     display: flex;
     gap: 20px;
     justify-content: left;
     text-align: center;
     align-items: center;
 }
-.mainHeaderMobileHolderItemTwo p:hover{
+.mainHeaderMobileHolderItemTwo a:hover{
     background-color: #C3E7FF;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 }
+
+.mainHeaderMobileHolderItemTwoLinks{
+    text-decoration: none;
+    color: #111111;
+    margin-left: 20px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .mainHeaderLogo {

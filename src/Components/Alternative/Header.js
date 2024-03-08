@@ -66,13 +66,13 @@ export default function HeaderTwo() {
         <div className={styles.mainHeaderMobileHolder} >
 
           <div className={styles.mainHeaderMobileHolderItemTwo} >
-            <p><HomeOutlinedIcon /> Home</p>
-            <p><InfoOutlinedIcon /> About</p>
-            <p><CalendarMonthOutlinedIcon /> Event</p>
-            <p><GroupsOutlinedIcon /> Team</p>
-            <p><FeedbackOutlinedIcon /> Feedback</p>
-            <p><QuizOutlinedIcon /> FAQ's</p>
-            <p><b>{"<>"}</b>Join club</p>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="/#"><HomeOutlinedIcon />Home</a>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="/#about"><InfoOutlinedIcon /> About</a>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="/#event"><CalendarMonthOutlinedIcon /> Event</a>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="/#teams"><GroupsOutlinedIcon /> Team</a>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="/#"><FeedbackOutlinedIcon /> Feedback</a>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="/#"><QuizOutlinedIcon /> FAQ's</a>
+          <a className={styles.mainHeaderMobileHolderItemTwoLinks} href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=857409878587-im3f0si9p11h41a6aeiil7cs37frkubb.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fgdsc.community.dev%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&scope=profile%20email&response_type=code&state=mIqbVEW7LSWV&access_type=offline&service=lso&o2v=1&flowName=GeneralOAuthFlow"><b>{"<>"}</b> Join club</a>
 
           </div>
         </div>
