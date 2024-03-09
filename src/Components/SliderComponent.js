@@ -12,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import { IconButton, Grid, Divider, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from "@mui/icons-material/GitHub";
 import "./slider.css";
 
 export default function SliderComponent() {
@@ -101,32 +101,39 @@ export default function SliderComponent() {
   ];
   var reviews = [];
 
-  const [teamdata, setteamdata] = useState([])
-  
+  const [teamdata, setteamdata] = useState([]);
 
   useEffect(() => {
     let i = 1;
     let rendomint = () => {
       if (i === 4) {
-        i = 1
+        i = 1;
       } else {
-        i = i + 1
+        i = i + 1;
       }
-      return i
-    }
+      return i;
+    };
 
     const fetchdata = async () => {
-      const response = await fetch("https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Teams/data.json")
-      const data = await response.json()
-      setteamdata(data.map((item, idx) => ({ ...item, bg: `/images/bg${rendomint()}.png` })))
-    }
+      const response = await fetch(
+        "https://raw.githubusercontent.com/GDSCITM/GDSC-dataStore/main/Teams/data.json"
+      );
+      const data = await response.json();
+      setteamdata(
+        data.map((item, idx) => ({
+          ...item,
+          bg: `/images/bg${rendomint()}.png`,
+        }))
+      );
+    };
 
     fetchdata();
   }, []);
 
+  let size = 5;
   var settings = {
-    dots: true,
-    arrows: false,
+    dots: teamdata.length > size,
+    // arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -150,19 +157,23 @@ export default function SliderComponent() {
   };
 
   const handleNext = () => {
-    rs.current.slickNext();
+    if (teamdata.length > size) {
+      rs.current.slickNext();
+    }
   };
 
   const handlePrev = () => {
-    rs.current.slickPrev();
+    if (teamdata.length > size) {
+      rs.current.slickPrev();
+    }
   };
 
-  const showComponent = (data) =>
-    data.map((item, index) => (
+  const showComponent = (data, start, end) =>
+    data.slice(start, end).map((item, index) => (
       <Grid
         item
         xl={3}
-        lg={4}  
+        lg={4}
         md={6}
         sm={6}
         xs={12}
@@ -172,6 +183,7 @@ export default function SliderComponent() {
           padding: "30px 0px 30px 0px",
           pointerEvents: "auto",
         }}
+        key={index}
       >
         <Box
           sx={{
@@ -196,10 +208,18 @@ export default function SliderComponent() {
               backgroundPosition: "center",
               borderTopLeftRadius: 16,
               borderTopRightRadius: 16,
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
-            <img style={{ height: "6.75rem", width: "6.75rem", borderRadius: "50%", border: "4px solid white" }} src={item.avatar} />
+            <img
+              style={{
+                height: "6.75rem",
+                width: "6.75rem",
+                borderRadius: "50%",
+                border: "4px solid white",
+              }}
+              src={item.avatar}
+            />
           </Box>
           <Box style={{ height: 107.39, paddingBottom: "20px" }}>
             <Typography
@@ -241,9 +261,30 @@ export default function SliderComponent() {
               }}
               color="#959595"
             >
-              {item.linkedin ? <a href={item.linkedin} target="_blank"><LinkedInIcon fontSize="large" style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }} /></a> : null}
-              {item.twitter ? <a href={item.twitter} target="_blank"><TwitterIcon fontSize="large" style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }} /></a> : null}
-              {item.github ? <a href={item.github} target="_blank"><GitHubIcon fontSize="large" style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }} /></a> : null}
+              {item.linkedin ? (
+                <a href={item.linkedin} target="_blank">
+                  <LinkedInIcon
+                    fontSize="large"
+                    style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }}
+                  />
+                </a>
+              ) : null}
+              {item.twitter ? (
+                <a href={item.twitter} target="_blank">
+                  <TwitterIcon
+                    fontSize="large"
+                    style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }}
+                  />
+                </a>
+              ) : null}
+              {item.github ? (
+                <a href={item.github} target="_blank">
+                  <GitHubIcon
+                    fontSize="large"
+                    style={{ cursor: "pointer ", color: "rgb(149, 149, 149)" }}
+                  />
+                </a>
+              ) : null}
             </Typography>
           </Box>
         </Box>
@@ -264,9 +305,7 @@ export default function SliderComponent() {
           position: "relative",
         }}
       >
-        <Grid style={{ position: "absolute", top: 0, left: 100 }}>
-          
-        </Grid>
+        <Grid style={{ position: "absolute", top: 0, left: 100 }}></Grid>
         <Grid
           style={{
             marginTop: 20,
@@ -275,49 +314,65 @@ export default function SliderComponent() {
             fontSize: 30,
           }}
         >
-          <Grid style={{ display: "flex", justifyContent: "center", gap:"1rem",fontSize:"3rem" }}>
-          <IconButton
-            onClick={handlePrev}
-            variant="contained"
-            style={{ cursor: "pointer" }}
-          >
-            <img src="/images/leftarrow.png" />
-          </IconButton>
-          <div>
-
-          Leadership Team
           <Grid
             style={{
-              color: "#666666",
-              fontSize: "1rem",
               display: "flex",
               justifyContent: "center",
-              // fontWeight: 400,
-              margin: 10,
+              gap: "1rem",
+              fontSize: "3rem",
             }}
           >
-            vision and courage to create
-          </Grid>
-          </div>
-          <IconButton onClick={handleNext} variant="contained">
-            <img src="/images/rightarrow.png" />
-          </IconButton>
+            <IconButton
+              onClick={handlePrev}
+              variant="contained"
+              style={{
+                cursor: "pointer",
+                display: teamdata.length > size ? "block" : "none",
+              }}
+            >
+              <img src="/images/leftarrow.png" />
+            </IconButton>
+            <div>
+              Leadership Team
+              <Grid
+                style={{
+                  color: "#666666",
+                  fontSize: "1rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  // fontWeight: 400,
+                  margin: 10,
+                }}
+              >
+                vision and courage to create
+              </Grid>
+            </div>
+            <IconButton
+              onClick={handleNext}
+              variant="contained"
+              style={{
+                cursor: "pointer",
+                display: teamdata.length > size ? "block" : "none",
+              }}
+            >
+              <img src="/images/rightarrow.png" />
+            </IconButton>
           </Grid>
           <Divider color="#333333" marginTop={10} />
-          
         </Grid>
-        <Grid style={{ position: "absolute", top: 0, right: 100 }}>
-          
-        </Grid>
+        <Grid style={{ position: "absolute", top: 0, right: 100 }}></Grid>
       </Grid>
       <div style={{ marginTop: "60px", position: "relative" }}>
-        <Slider {...settings} ref={rs} >
-          <Grid container sx={{ display: "flex !important", }}>
-            {showComponent(teamdata)}
+        <Slider {...settings} ref={rs}>
+          <Grid container sx={{ display: "flex !important" }}>
+            {showComponent(teamdata, 0, size)}
           </Grid>
-          <Grid container sx={{ display: "flex !important", }}>
+          <Grid container sx={{ display: "flex !important" }}>
+            {showComponent(teamdata, size, teamdata.length)}
+          </Grid>
+          {/* <Grid container sx={{ display: "flex !important" }}>
             {showComponent(reviews)}
-          </Grid>
+          </Grid> */}
         </Slider>
       </div>
     </div>
