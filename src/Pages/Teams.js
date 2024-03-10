@@ -35,6 +35,7 @@ export default function Teams() {
               fontSize:50,
               "@media (max-width: 600px)": {
                 marginLeft: '18%', 
+                width: "fit-content",
               },
             }}
           >
