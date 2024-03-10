@@ -18,6 +18,9 @@ export default function Teams() {
             flexDirection: "row",
             justifyContent : "center",
             background : "rgb(244 240 240 / 45%)",
+            "@media (max-width: 600px)": {
+              marginLeft: '80px', 
+            },
           }}
         >
           {/* <img src={LeftImage} style={{ width:1440,height:92 }} /> */}
@@ -33,10 +36,7 @@ export default function Teams() {
               fontWeight:'bold',
               color:'#fff',
               fontSize:50,
-              "@media (max-width: 600px)": {
-                marginLeft: '0', 
-                width: "fit-content",
-              },
+
             }}
           >
             Teams
