@@ -1,8 +1,33 @@
-.person_div{
+.person_div {
     transition: all 0.3s ease-in-out;
 }
 
-.person_div:hover{
-    transform:scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.person_div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+    .gridContainer {
+      margin-left: -25px;
+    }
+
+    .leadershipText{
+        margin-top: 90px;
+        margin-left: -10px;
+        font-size: 30px;
+    }
+
+    .Button{
+        margin-left: -55px;
+        margin-top: 15px;
+    }
+
+    .Button-img{
+        margin-left: -55px;
+        margin-top: 65px;
+    }
+    .arrow-img{
+        margin-top: 50px;
+    }
 }

@@ -130,10 +130,10 @@ export default function SliderComponent() {
     fetchdata();
   }, []);
 
-  let size = 5;
+  let size = 3;
   var settings = {
     dots: teamdata.length > size,
-    // arrows: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -292,7 +292,7 @@ export default function SliderComponent() {
     ));
 
   return (
-    <div>
+    <div className="gridContainer">
       <Grid
         container
         spacing={1}
@@ -303,6 +303,9 @@ export default function SliderComponent() {
           justifyContent: "center",
           flexDirection: "row",
           position: "relative",
+          "@media (max-width: 600px)": {
+            marginTop:"-50px",
+          },
         }}
       >
         <Grid style={{ position: "absolute", top: 0, left: 100 }}></Grid>
@@ -318,7 +321,7 @@ export default function SliderComponent() {
             style={{
               display: "flex",
               justifyContent: "center",
-              gap: "1rem",
+               gap: "1rem",
               fontSize: "3rem",
             }}
           >
@@ -326,13 +329,14 @@ export default function SliderComponent() {
               onClick={handlePrev}
               variant="contained"
               style={{
+                // className:"Button",
                 cursor: "pointer",
                 display: teamdata.length > size ? "block" : "none",
               }}
             >
-              <img src="/images/leftarrow.png" />
+              <img className="Button-img" src="/images/leftarrow.png" />
             </IconButton>
-            <div>
+            <div className="leadershipText">
               Leadership Team
               <Grid
                 style={{
@@ -351,11 +355,12 @@ export default function SliderComponent() {
               onClick={handleNext}
               variant="contained"
               style={{
+                className:"Button",
                 cursor: "pointer",
                 display: teamdata.length > size ? "block" : "none",
               }}
             >
-              <img src="/images/rightarrow.png" />
+              <img src="/images/rightarrow.png" className="arrow-img" />
             </IconButton>
           </Grid>
           <Divider color="#333333" marginTop={10} />
