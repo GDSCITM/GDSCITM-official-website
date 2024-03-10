@@ -346,6 +346,10 @@ export default function SliderComponent() {
                   justifyContent: "center",
                   // fontWeight: 400,
                   margin: 10,
+                  "@media (max-width: 600px)": {
+                    fontSize: "0.8rem", // Adjust font size for smaller screens
+                    margin: 5, // Adjust margin for smaller screens
+                  },
                 }}
               >
                 vision and courage to create

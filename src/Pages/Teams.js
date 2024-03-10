@@ -33,6 +33,9 @@ export default function Teams() {
               fontWeight:'bold',
               color:'#fff',
               fontSize:50,
+              "@media (max-width: 600px)": {
+                marginLeft: '18%', 
+              },
             }}
           >
             Teams
