@@ -23,7 +23,7 @@ export default function Teams() {
           
           <Grid
             style={{
-              width: "100%", // Set width to 100% initially
+              width: "342",
               height: 92,
               backgroundColor: "#FFCE50",
               display: "flex",
