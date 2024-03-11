@@ -341,15 +341,15 @@ export default function SliderComponent() {
               <Grid
                 style={{
                   color: "#666666",
-                  fontSize: "1rem",
+                  fontSize: "0.8rem",
                   display: "flex",
                   justifyContent: "center",
                   // fontWeight: 400,
                   margin: 10,
-                  "@media (max-width: 600px)": {
-                    fontSize: "0.8rem", // Adjust font size for smaller screens
-                    margin: 5, // Adjust margin for smaller screens
-                  },
+                  // "@media (max-width: 600px)": {
+                  //   fontSize: "0.8rem", 
+                  //   margin: 5,
+                  // },
                 }}
               >
                 vision and courage to create

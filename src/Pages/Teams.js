@@ -33,7 +33,7 @@ export default function Teams() {
               color:'#fff',
               fontSize:50,
               "@media (max-width: 600px)": {
-                width: "auto", // Remove width in mobile view
+                width: "auto", 
                 marginLeft:"20px",
               },
 
