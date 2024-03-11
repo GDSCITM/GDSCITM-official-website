@@ -130,7 +130,7 @@ export default function SliderComponent() {
     fetchdata();
   }, []);
 
-  let size = 5;
+  let size = 3;
   var settings = {
     dots: teamdata.length > size,
     arrows: false,
@@ -304,7 +304,7 @@ export default function SliderComponent() {
           flexDirection: "row",
           position: "relative",
           "@media (max-width: 600px)": {
-            marginTop:"-50px",
+            marginTop: "-50px",
           },
         }}
       >
@@ -315,13 +315,14 @@ export default function SliderComponent() {
             color: "#525252",
             fontWeight: "bold",
             fontSize: 30,
+            textAlign: "center",
           }}
         >
           <Grid
             style={{
               display: "flex",
               justifyContent: "center",
-               gap: "1rem",
+              gap: "1rem",
               fontSize: "3rem",
             }}
           >
@@ -347,7 +348,7 @@ export default function SliderComponent() {
                   // fontWeight: 400,
                   margin: 10,
                   // "@media (max-width: 600px)": {
-                  //   fontSize: "0.8rem", 
+                  //   fontSize: "0.8rem",
                   //   margin: 5,
                   // },
                 }}
@@ -359,7 +360,7 @@ export default function SliderComponent() {
               onClick={handleNext}
               variant="contained"
               style={{
-                className:"Button",
+                className: "Button",
                 cursor: "pointer",
                 display: teamdata.length > size ? "block" : "none",
               }}
@@ -376,9 +377,11 @@ export default function SliderComponent() {
           <Grid container sx={{ display: "flex !important" }}>
             {showComponent(teamdata, 0, size)}
           </Grid>
-          <Grid container sx={{ display: "flex !important" }}>
-            {showComponent(teamdata, size, teamdata.length)}
-          </Grid>
+          {teamdata.size > size && (
+            <Grid container sx={{ display: "flex !important" }}>
+              {showComponent(teamdata, size, teamdata.length)}
+            </Grid>
+          )}
           {/* <Grid container sx={{ display: "flex !important" }}>
             {showComponent(reviews)}
           </Grid> */}
