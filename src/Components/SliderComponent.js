@@ -130,7 +130,7 @@ export default function SliderComponent() {
     fetchdata();
   }, []);
 
-  let size = 3;
+  let size = 5;
   var settings = {
     dots: teamdata.length > size,
     arrows: false,
