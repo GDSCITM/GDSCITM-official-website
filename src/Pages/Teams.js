@@ -23,7 +23,7 @@ export default function Teams() {
           
           <Grid
             style={{
-              width: 342,
+              width: "100%", // Set width to 100% initially
               height: 92,
               backgroundColor: "#FFCE50",
               display: "flex",
@@ -33,9 +33,10 @@ export default function Teams() {
               color:'#fff',
               fontSize:50,
               "@media (max-width: 600px)": {
-                width:"200px",
+                width: "auto", // Remove width in mobile view
                 marginLeft:"20px",
               },
+
 
             }}
           >
