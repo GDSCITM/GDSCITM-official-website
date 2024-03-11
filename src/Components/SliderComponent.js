@@ -130,7 +130,7 @@ export default function SliderComponent() {
     fetchdata();
   }, []);
 
-  let size = 3;
+  let size = 5;
   var settings = {
     dots: teamdata.length > size,
     arrows: false,
@@ -377,7 +377,7 @@ export default function SliderComponent() {
           <Grid container sx={{ display: "flex !important" }}>
             {showComponent(teamdata, 0, size)}
           </Grid>
-          {teamdata.size > size && (
+          {teamdata.length > size && (
             <Grid container sx={{ display: "flex !important" }}>
               {showComponent(teamdata, size, teamdata.length)}
             </Grid>
