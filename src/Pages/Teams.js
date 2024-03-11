@@ -6,9 +6,9 @@ export default function Teams() {
   return (
     <Grid id='teams'>
        <Grid rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 1 }} sx={{ overflow: "hidden", background : `url(${"images/LeftImage.svg"})`, backgroundRepeat : "repeat-x", backgroundSize : "600px", marginTop: '86px', 
-        "@media (max-width: 600px)": {
-          marginLeft: '-80px', 
-        },
+        // "@media (max-width: 600px)": {
+        //   marginLeft: '-80px', 
+        // },
       }}>
         <Grid
           style={{
@@ -18,9 +18,7 @@ export default function Teams() {
             flexDirection: "row",
             justifyContent : "center",
             background : "rgb(244 240 240 / 45%)",
-            "@media (max-width: 600px)": {
-              marginLeft: '80px', 
-            },
+            marginLeft:"10px",
           }}
         >
           {/* <img src={LeftImage} style={{ width:1440,height:92 }} /> */}
